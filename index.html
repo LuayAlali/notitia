@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<title>Web App Dashboard</title>
+</head>
+
+<body> /*mobile layout */
+	<header>
+			<h1 class="appName">App Name</h1>
+			<div class="bell">Bell</div>
+			<div class="notification">Notification</div>
+			<img src="_blank" alt="profile picture">
+			<h3 class="profileName">Profile Name</h3>
+	</header>
+	<nav class="dskTabSideBar">
+		<a href=""><img src="_blank" alt="notification" class="icon1"></a>
+		<a href=""><img src="_blank" alt="notification" class="icon2"></a>
+		<a href=""><img src="_blank" alt="notification" class="icon3"></a>
+		<a href=""><img src="_blank" alt="notification" class="icon4"></a>
+	
+	</nav>
+	
+	<main class="mainBody">
+		
+		<div class="dashboard">/*one row, one column*/
+		<h2 class="headline">Dashboard</h2>
+			<input type="search" placeholder="Search..."/>
+		</div>
+		<div class="alert" id="alert">
+		/* JS will go here*/
+		</div>
+		<div class="traffic">/*1 row 1 column*/
+			<li class="traffic-nav-link">Hourly</li>
+			<li class="traffic-nav-link">Daily"</li>
+			<li class="traffic-nav-link">Weekly</li>
+			<li class="traffic-nav-link">Monthly</li>
+		</div>
+		
+	
+		<div class="trafficTypes">2r, 1c</div> /* dsk,tab: 1r,2c */
+		
+		
+		<div class="socialStats">3r, 1c  </div> /* dsk,tab: 1r, 3c */
+		
+		<div class="membersStats"> 2r, 1c
+			<div class="newMembers">New Memebers</div>
+			<div class="memberActivity">memberActivity</div>
+		</div> /* dsk,tab: 1r, 2c */
+		
+		<div class="messageUser">Message User</div>
+		
+		<div class="settings">Settings</div>
+	</main>
+</body>
+</html>

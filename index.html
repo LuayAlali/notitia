@@ -3,36 +3,36 @@
 <head>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+	<link rel="stylesheet" href="main.css">
 <title>Web App Dashboard</title>
 </head>
 
-<body> /*mobile layout */
-	<header>
+<body class="grid-container"> 
+	<header class="app-header">
 			<h1 class="appName">App Name</h1>
 			<div class="bell">Bell</div>
 			<div class="notification">Notification</div>
 			<img src="../_blank" alt="profile picture">
 			<h3 class="profileName">Profile Name</h3>
 	</header>
-	<nav class="dskTabSideBar">
-		<a href=""><img src="../_blank" alt="notification" class="icon1"></a>
-		<a href=""><img src="../_blank" alt="notification" class="icon2"></a>
-		<a href=""><img src="../_blank" alt="notification" class="icon3"></a>
-		<a href=""><img src="../_blank" alt="notification" class="icon4"></a>
+	<nav class="side-bar">
+		<a href=""><img src="../_blank"  class="icon1"></a>
+		<a href=""><img src="../_blank"  class="icon2"></a>
+		<a href=""><img src="../_blank"  class="icon3"></a>
+		<a href=""><img src="../_blank"  class="icon4"></a>
 	
 	</nav>
 	
 	<main class="mainBody">
 		
-		<div class="dashboard">/*one row, one column*/
+		<div class="dashboard">
 		<h2 class="headline">Dashboard</h2>
 			<input type="search" placeholder="Search..."/>
 		</div>
 		<div class="alert" id="alert">
-		/* JS will go here*/
+		
 		</div>
-		<section class="traffic">/*1 row 1 column*/
+		<section class="traffic">
 			<div class="traffic-header">
 				<h3>Traffic</h3>
 			<ul class="traffic-nav">

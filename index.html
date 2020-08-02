@@ -92,19 +92,35 @@
 					<!-- Memeber Email link(replace the # with actual email) -->
 					<a href="#">MemberEmail@gmail.com</a>		
 				</div>
+				<p>07/23/2020</p>
 			</div>
 		</section>
 		
-	
+	<section class="message">
+		<h3>Message User</h3>
+
+		<form class="widget-container">	
+			<input type="text" class="form-field" id="userField" placeholder="Search for user">
+			<textarea  class="form-area" id="messageField" placeholder="Meessage for user" ></textarea>
+			<button class="button-primary" id="send">Send</button>
+		</form>
+	</section>
+
+	<section class="settings">
+			<h3>Settings</h3>
+			<!-- custom CSS toggle code -->
+			<!-- custom CSS toggle code -->
+			<select id="timezone" class="form-field"> 
+				<option disabled selected>Select a Timezone</option>
+				<option>Eastern</option>
+				<!-- option is disabled , I have to open option once timezones are coded in.-->
+			</select>
 		
-		<div class="membersStats"> 2r, 1c
-			<div class="newMembers">New Memebers</div>
-			<div class="memberActivity">memberActivity</div>
-		</div> /* dsk,tab: 1r, 2c */
-		
-		<div class="messageUser">Message User</div>
-		
-		<div class="settings">Settings</div>
+		<div class="settings-button">
+			<button class="button-primary" id="save">Save</button>
+			<button class="button-disabled" id="cancelled">Cancel</button>
+		</div>
+	</section>
 	</main>
 </body>
 </html>

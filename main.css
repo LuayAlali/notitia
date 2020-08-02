@@ -46,8 +46,12 @@
         .dashboard, .traffic,  .social-container {
             grid-column: 1 / span 2;
           }
-          .daily, .mobile, .message, .user, .members, .recent-activity{
+          .daily, .message, .user, .members{
               grid-column:  1 / span 1;
+          }
+          .mobile, .recent-activity, .settings {
+            grid-column: 2 / span 1;
+
           }
     }
 

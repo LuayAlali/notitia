@@ -6,36 +6,55 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:  15% 5% 1fr 8%;
+    grid-template-columns: 1fr ;
+    grid-template-rows:  15%  1fr 8%;
     grid-template-areas: 
     "header"
-	"dashboard"
     "main"
     "nav";
    overflow: hidden;
    height: 100vh;
    width: 100vw;
-   max-width: 1200px;
+   max-width: 1300px;
    margin: auto;
    padding: 15px 5px 15px 5px;
 }
-.app-header{
-	display: inline-flex;
-}
-.dashboard{
-	display: inline-flex;
 
-	
-}
 /* header, main, navigation */
 
 /* header */
 .app-header{
     grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 40px 150px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "appName bell profile"
+    ;
 }
-.dashboard{
-	grid-area: dashboard;
+.appName{
+    grid-area: appName;
+    margin-top: 0;
+}
+.bell{
+    grid-area: bell;
+    margin-top: 0;
+}
+/* .notification{
+grid-area: notification;
+
+} */
+.profile-picture, .profileName{
+    grid-area: profile;
+    margin-top: 0;
+}
+
+.headline{
+padding-right: 10px;
+}
+.searchBar{
+    height: 35px;
+    max-width: 150px;
 }
 /* navigation, possibly will add two navigation for two media queries */
 .side-bar{
@@ -48,6 +67,7 @@
         grid-area: main;
         display: grid;
         overflow-y: scroll;
+        /* max-width: .8rem; */
     }
 .widget-container-full {
     width: 95vw;
@@ -59,15 +79,15 @@
     
     @media (min-width: 768px) {
         .grid-container {
-            grid-template-rows:  15%  5% 1fr ;
+            grid-template-rows:  15% 1fr ;
             grid-template-columns: 55px 1fr ;
             grid-template-areas: 
-                "header header"
-				"dashboard dashboard"
+                "header dashboard"
                 "nav main";
                 
                
         }
+        
         .mainBody{
             grid-template-columns: 1fr 1fr;
             

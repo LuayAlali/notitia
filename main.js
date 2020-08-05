@@ -60,6 +60,7 @@ const dailyOptions = {
     aspectRatio: 2.5,
     animation: {
     duration: 0
+    
     },
     scales: {
         yAxes: [{
@@ -87,23 +88,33 @@ const mobileData = {
     datasets: [{
     label: '# of Users',
     data: [2000, 550, 500],
-    borderWidth: 0,
+    borderWidth: 1,
+    hoverBackgroundColor: [
+        '#4447a6',
+        '#45b652',
+        '#6aa5af'
+    ],
     backgroundColor: [
     '#7477BF',
     '#78CF82',
     '#51B6C8'
-    ]
+    ],
     }]
 };
 
 const mobileOptions = {
+    aspectRatio: 2.5,
+    animation: {
+    duration: 1500
+    },
     legend: {
     position: 'right',
     labels: {
     boxWidth: 20,
     fontStyle: 'bold'
     }
-    }
+    },
+    
     };
 
     let mobileChart = new Chart(mobileCanvas, {

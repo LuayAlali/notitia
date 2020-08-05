@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="main.css">
 <title>Web App Dashboard</title>
 </head>
@@ -14,8 +15,14 @@
 			<div class="bell">Bell</div>
 			<div class="notification">Notification</div>
 			<img src="" alt="profile picture">
-			<h3 class="profileName">Profile Name</h3>
+		<h3 class="profileName">Profile Name</h3>
 	</header>
+		
+		<div class="dashboard">
+		<h2 class="headline">Dashboard</h2>
+			<div class="alert" id="alert"></div>
+			<input type="search" placeholder="Search..."/>
+		</div>
 	<nav class="side-bar">
 		<a href=""><img src=""  class="icon1"></a>
 		<a href=""><img src=""  class="icon2"></a>
@@ -28,13 +35,10 @@
 	<!-- MAIN CONTAINER -->
 	<main class="mainBody">
 		
-		<div class="dashboard">
-		<h2 class="headline">Dashboard</h2>
-			<input type="search" placeholder="Search..."/>
-		</div>
-		<div class="alert" id="alert">
 		
-		</div>
+		
+		
+	
 
 		<!-- TRAFFIC -->
 		<section class="traffic">
@@ -140,7 +144,7 @@
 
 		<form class="widget-container">	
 			<input type="text" class="form-field" id="userField" placeholder="Search for user">
-			<textarea  class="form-area" id="messageField" placeholder="Meessage for user" ></textarea>
+			<textarea  class="form-area" id="messageField" placeholder="Message for user" ></textarea>
 			<button class="button-primary" id="send">Send</button>
 		</form>
 	</section>

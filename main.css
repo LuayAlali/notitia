@@ -7,43 +7,71 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows:  15% 5% 1fr 8%;
     grid-template-areas: 
     "header"
+	"dashboard"
     "main"
     "nav";
+   overflow: hidden;
+   height: 100vh;
+   width: 100vw;
+   max-width: 1200px;
+   margin: auto;
+   padding: 15px 5px 15px 5px;
 }
+.app-header{
+	display: inline-flex;
+}
+.dashboard{
+	display: inline-flex;
 
+	
+}
 /* header, main, navigation */
 
 /* header */
 .app-header{
     grid-area: header;
 }
+.dashboard{
+	grid-area: dashboard;
+}
 /* navigation, possibly will add two navigation for two media queries */
 .side-bar{
     grid-area: nav;
+    
     }
 
     /* main container */
     .mainBody {
         grid-area: main;
         display: grid;
+        overflow-y: scroll;
     }
-.widget-container-full, widget-container-half{
+.widget-container-full {
+    width: 95vw;
+}
+.widget-container-half{
     width: 95vw;
 }
     /* desktop layout */
     
     @media (min-width: 768px) {
         .grid-container {
+            grid-template-rows:  15%  5% 1fr ;
             grid-template-columns: 55px 1fr ;
             grid-template-areas: 
                 "header header"
+				"dashboard dashboard"
                 "nav main";
+                
+               
         }
         .mainBody{
             grid-template-columns: 1fr 1fr;
+            
+            
         }
         .dashboard, .traffic,  .social-container {
              grid-column: 1 / span 2;
@@ -56,12 +84,15 @@
             
           }
           .widget-container-full{
-            width: 90vw;
+            width: 50vw;
         }
          .widget-container-half{
              width: 45vw;
          }
+         
     }
 
     
+
+   
     

@@ -1,7 +1,7 @@
 #Layer_1{
     height: 15px;
    fill: white;
-    transition: fill, opacity .3s;
+    transition: display, fill, opacity .3s;
     transition-timing-function: ease-in-out;
     /* transition-delay: .2s; */
     margin-top: 8px;
@@ -9,18 +9,15 @@
 }
 
 
-/* .st0{
-    fill: white;   
-    
-    transition: fill;
-} */
+/*  need to find out how to display:none circle when #Layer_1 is active */
 #Layer_1:hover{
     
     fill:#e1ff4d;
    opacity: .5;
 }
-#Layer_1:clicked
-/* .st0:hover{
-    fill: yellow;
+
+.st1{
+    fill: green;
    
-} */
+}
+

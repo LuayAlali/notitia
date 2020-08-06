@@ -16,7 +16,7 @@
    overflow: hidden;
    height: 100vh;
    width: 100vw;
-   max-width: 1500px;
+   max-width: 1800px;
    margin: auto;
    padding: 0px 5px 15px 5px;
    background-color: rgba(26,26,26,.9);
@@ -73,9 +73,10 @@ padding-right: 10px;
         display: grid;
         overflow-y: scroll;
         /* max-width: .8rem; */
-        background-color: white;
+        background-color: whitesmoke;
         border-radius: 5px;
         color:black;
+       
        
     }
 .widget-container-full {
@@ -93,14 +94,14 @@ padding-right: 10px;
             grid-template-areas: 
                 "header dashboard"
                 "nav main";
-                
+            
                
         }
         
         .mainBody{
             grid-template-columns: 1fr 1fr;
             grid-template-rows:8% 2fr 2fr 1fr 2fr 1fr;
-          
+           
             
         }
         .dashboard, .traffic,  .social-container {

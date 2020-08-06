@@ -2,12 +2,13 @@
 
 *{
     box-sizing: border-box;
+    
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows:  15%  1fr 8%;
+    grid-template-rows:  10%  1fr 8%;
     grid-template-areas: 
     "header"
     "main"
@@ -15,9 +16,12 @@
    overflow: hidden;
    height: 100vh;
    width: 100vw;
-   max-width: 1300px;
+   max-width: 1500px;
    margin: auto;
-   padding: 15px 5px 15px 5px;
+   padding: 0px 5px 15px 5px;
+   background-color: rgba(26,26,26,.9);
+   color: white;
+   
 }
 
 /* header, main, navigation */
@@ -35,6 +39,7 @@
 .appName{
     grid-area: appName;
     margin-top: 0;
+    font-size: 20px;
 }
 .bell{
     grid-area: bell;
@@ -68,12 +73,16 @@ padding-right: 10px;
         display: grid;
         overflow-y: scroll;
         /* max-width: .8rem; */
+        background-color: white;
+        border-radius: 5px;
+        color:black;
+       
     }
 .widget-container-full {
-    width: 95vw;
+    width: 95%;
 }
 .widget-container-half{
-    width: 95vw;
+    width: 95%;
 }
     /* desktop layout */
     
@@ -90,7 +99,8 @@ padding-right: 10px;
         
         .mainBody{
             grid-template-columns: 1fr 1fr;
-            
+            grid-template-rows:8% 2fr 2fr 1fr 2fr 1fr;
+          
             
         }
         .dashboard, .traffic,  .social-container {
@@ -104,11 +114,14 @@ padding-right: 10px;
             
           }
           .widget-container-full{
-            width: 50vw;
+            width: 70%;
+            
         }
          .widget-container-half{
-             width: 45vw;
+             width: 50%;
+            
          }
+         
          
     }
 

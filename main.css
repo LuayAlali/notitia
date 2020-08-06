@@ -5,6 +5,7 @@
     
 }
 
+
 .grid-container{
     display: grid;
     grid-template-columns: 1fr ;
@@ -28,6 +29,7 @@
 
 /* header */
 .app-header{
+    margin-top: 10px;
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 40px 150px;
@@ -40,6 +42,7 @@
     grid-area: appName;
     margin-top: 0;
     font-size: 20px;
+    margin-top: 8px;
 }
 .bell{
     grid-area: bell;
@@ -51,7 +54,7 @@ grid-area: notification;
 } */
 .profile-picture, .profileName{
     grid-area: profile;
-    margin-top: 0;
+    margin-top: 8px;
 }
 
 .headline{
@@ -79,6 +82,19 @@ padding-right: 10px;
        
        
     }
+    .dashboard{
+       display: flex;
+       flex-direction: column;
+    }
+    .alert{
+       margin: auto;
+       cursor: pointer;
+    }
+    .alert-banner-close{
+       padding: 0;
+       margin-left: 292px;
+      
+    }
 .widget-container-full {
     width: 95%;
 }
@@ -94,14 +110,14 @@ padding-right: 10px;
             grid-template-areas: 
                 "header dashboard"
                 "nav main";
-            
+                
                
         }
         
         .mainBody{
             grid-template-columns: 1fr 1fr;
             grid-template-rows:8% 2fr 2fr 1fr 2fr 1fr;
-           
+            
             
         }
         .dashboard, .traffic,  .social-container {

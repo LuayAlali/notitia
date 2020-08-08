@@ -32,7 +32,7 @@
     margin-top: 10px;
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 40px 150px;
+    grid-template-columns: 1fr 30px 150px;
     grid-template-rows: 1fr;
     grid-template-areas: 
     "appName bell profile"
@@ -42,19 +42,37 @@
     grid-area: appName;
     margin-top: 0;
     font-size: 20px;
-    margin-top: 8px;
+    margin-top: 4px;
 }
-.bell{
+#Layer_1{
     grid-area: bell;
-    margin-top: 0;
+    margin-top: 20px;
+    padding-right: 10px;
+    
+    
+   
+   
 }
+
 /* .notification{
 grid-area: notification;
 
 } */
 .profile-picture, .profileName{
     grid-area: profile;
-    margin-top: 8px;
+    margin-top: 7px;
+    cursor: default;
+}
+.profile-picture{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    margin-top: 0;
+}
+.profileName{
+  margin-bottom: 0;
+  padding-bottom: 0;
+    margin-left: 50px;
 }
 
 .headline{
@@ -62,7 +80,21 @@ padding-right: 10px;
 }
 .searchBar{
     height: 35px;
-    max-width: 150px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px 1px 1px 1px;
+    border-color: rgba(0, 0, 0, 0.3); 
+    border-style: solid;
+    transition: width .3s ease-in;
+  
+}
+.searchBar:focus{
+    border-color: #7a7a7a;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 180px;
+    
 }
 /* navigation, possibly will add two navigation for two media queries */
 .side-bar{
@@ -75,7 +107,6 @@ padding-right: 10px;
         grid-area: main;
         display: grid;
         overflow-y: scroll;
-        /* max-width: .8rem; */
         background-color: whitesmoke;
         border-radius: 5px;
         color:black;
@@ -88,13 +119,32 @@ padding-right: 10px;
     }
     .alert{
        margin: auto;
-       cursor: pointer;
+       cursor: default;    
     }
     .alert-banner-close{
        padding: 0;
        margin-left: 292px;
-      
+       cursor: pointer;
     }
+    .traffic-nav{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        
+    }
+    .traffic-nav-link{
+        padding: 5px 8px 5px 8px;
+     ;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color  .1s ease-in , color  .1s ease-in;
+    }
+    .traffic-nav-link:hover{
+        background-color: #f5ad75;
+        color: white;
+    }
+    .
 .widget-container-full {
     width: 95%;
 }
@@ -110,14 +160,14 @@ padding-right: 10px;
             grid-template-areas: 
                 "header dashboard"
                 "nav main";
-                
+                overflow: auto;
                
         }
         
         .mainBody{
             grid-template-columns: 1fr 1fr;
             grid-template-rows:8% 2fr 2fr 1fr 2fr 1fr;
-            
+            overflow-y: scroll;
             
         }
         .dashboard, .traffic,  .social-container {

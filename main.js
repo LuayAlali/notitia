@@ -15,16 +15,25 @@ let trafficData = {
     datasets:[{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
-            backgroundColor: 'rgba(145, 230, 191, .3)',
+            backgroundColor: 'rgba(199 , 203, 255, .8)',
             borderWidth: 1
     }]
 
 };
-
+//Hourly Line Graph
+let trafficData2 = {
+    labels: ["0","1-3", "4-6", "7-9", "10-13", "14-17", "18-21", "22-24"],
+    datasets:[{
+        data: [50, 120, 70, 300, 425, 630, 2040, 700],
+            backgroundColor: 'rgba(199 , 203, 255, .8)',
+            borderWidth: 1
+}]
+};
+//traffic options
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
-    duration: 0
+    duration: 2000
     },
 scales: {
     yAxes : [{
@@ -35,7 +44,10 @@ scales: {
 },
 legend: {
     display: false
-}
+},
+
+    events: ['click']
+
 };
 
 let trafficChart = new Chart(trafficCanvas, {
@@ -44,7 +56,19 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
     });
     
-
+   
+//    Hourly Data //
+    const trafficHourly = document.querySelector('.traffic-data2');
+    
+    trafficHourly.addEventListener('click', () => {
+  
+ trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData2,
+    options: trafficOptions
+    });
+    
+});
 const dailyData = {
     labels: ['S','M','T','W','T','F','S'],
     datasets: [{

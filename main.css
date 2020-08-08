@@ -151,6 +151,58 @@ padding-right: 10px;
 .widget-container-half{
     width: 95%;
 }
+
+/* Social Container */
+.social-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    grid-template-areas: 
+    "facebook twitter"
+    ;
+}
+.facebook{
+    grid-area: facebook;
+    display: inline-flex;
+    justify-content: center;
+    
+}
+.twitter{
+    grid-area: twitter;
+    display: inline-flex;
+   justify-content: center;
+}
+.social-image1{
+    align-self: center;
+}
+.social-image2{
+    align-self: center;
+}
+#facebook{
+    height: 39%;
+    width: 39%;
+    margin-left: 40px;
+}
+#twitter{
+    height: 30%;
+    width: 30%;
+    margin-left: 40px;
+   
+}
+.social-text1{
+    align-self: center;
+    padding-right: 20px;
+}
+.social-text2{
+    align-self: center;
+   padding-right: 20px;
+   
+    }
+/* p{
+    margin-top: 8px;
+ margin-bottom: 5px;
+} */
+
     /* desktop layout */
     
     @media (min-width: 768px) {

@@ -9,6 +9,29 @@ alertBanner.addEventListener('click', e =>{
 
 // line Graph
 let trafficCanvas = document.getElementById('traffic-chart');
+
+//traffic options
+let trafficOptions = {
+    aspectRatio: 2.5,
+    animation: {
+    duration: 2000
+    },
+scales: {
+    yAxes : [{
+        ticks: {
+            beginAtZero: true
+        }
+    }]
+},
+legend: {
+    display: false
+},
+
+    events: ['click']
+
+};
+
+
 //Weekly Data
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -49,26 +72,7 @@ let trafficData5 = {
             borderWidth: 1
 }]
 };
-//traffic options
-let trafficOptions = {
-    aspectRatio: 2.5,
-    animation: {
-    duration: 2000
-    },
-scales: {
-    yAxes : [{
-        ticks: {
-            beginAtZero: true
-        }
-    }]
-},
-legend: {
-    display: false
-},
 
-    events: ['click']
-
-};
 // Default chart 'Weekly'
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
@@ -182,13 +186,13 @@ const mobileData = {
     data: [2000, 550, 500],
     borderWidth: 1,
     hoverBackgroundColor: [
-        '#4447a6',
-        '#45b652',
+        'rgba(255, 147, 114, 1)',
+        'rgba(222,199,255,1)',
         '#6aa5af'
     ],
     backgroundColor: [
-    '#7477BF',
-    '#78CF82',
+    'rgba(255, 147, 114, .6)',
+    'rgba(222,199,255,.6)',
     '#51B6C8'
     ],
     }]

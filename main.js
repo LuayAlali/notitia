@@ -9,23 +9,43 @@ alertBanner.addEventListener('click', e =>{
 
 // line Graph
 let trafficCanvas = document.getElementById('traffic-chart');
+//Weekly Data
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
     datasets:[{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
-            backgroundColor: 'rgba(199 , 203, 255, .8)',
+            backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
     }]
 
 };
-//Hourly Line Graph
+//Hourly Data
 let trafficData2 = {
     labels: ["0","1-3", "4-6", "7-9", "10-13", "14-17", "18-21", "22-24"],
     datasets:[{
         data: [50, 120, 70, 300, 425, 630, 2040, 700],
-            backgroundColor: 'rgba(199 , 203, 255, .8)',
+            backgroundColor: 'rgba(255, 217, 114, .6)',
+            borderWidth: 1
+}]
+};
+//Daily Data
+let trafficData3 = {
+    labels: ["M","T", "W", "Th", "F", "S", "Su"],
+    datasets:[{
+        data: [260, 320, 120, 600, 425, 1200, 2300],
+            backgroundColor: 'rgba(255, 217, 114, .6)',
+            borderWidth: 1
+}]
+};
+
+//Monthly Data
+let trafficData5 = {
+    labels: ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sept", "Oct", "Nov", "Dec"],
+    datasets:[{
+        data: [3000, 3500, 4200, 4800, 5100, 5600, 5700, 6200, 6500, 6800, 7200, 7300],
+            backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
 }]
 };
@@ -49,7 +69,7 @@ legend: {
     events: ['click']
 
 };
-
+// Default chart 'Weekly'
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
@@ -57,7 +77,7 @@ let trafficChart = new Chart(trafficCanvas, {
     });
     
    
-//    Hourly Data //
+//    Hourly Event //
     const trafficHourly = document.querySelector('.traffic-data2');
     
     trafficHourly.addEventListener('click', () => {
@@ -69,12 +89,57 @@ let trafficChart = new Chart(trafficCanvas, {
     });
     
 });
+
+// Daily Event//
+const trafficDaily= document.querySelector('.traffic-data3');
+    
+trafficDaily.addEventListener('click', () => {
+
+trafficChart = new Chart(trafficCanvas, {
+type: 'line',
+data: trafficData3,
+options: trafficOptions
+});
+
+});
+
+// Weekly Event //
+const trafficWeekly = document.querySelector('.traffic-data');
+
+trafficWeekly.addEventListener('click', () => {
+
+    trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
+    });
+    
+    });
+
+    //Monthly Event //
+
+const trafficMonthly = document.querySelector('.traffic-data5');
+
+trafficMonthly.addEventListener('click', () => {
+
+    trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData5,
+    options: trafficOptions
+    });
+    
+    });
+
+
+
+    
+//BAR GRAPH
 const dailyData = {
     labels: ['S','M','T','W','T','F','S'],
     datasets: [{
         label: '# of Hits',
         data: [75, 115, 175, 125, 225, 200, 100],
-        backgroundColor: '#7477BF',
+        backgroundColor: '#7298ff',
         borderWidth: 1
     }]
 
@@ -105,6 +170,9 @@ let dailyChart = new Chart(dailyCanvas, {
     options: dailyOptions
 });
 
+
+
+//Pie 
 const mobileCanvas = document.getElementById('mobile-users');
 
 const mobileData = {

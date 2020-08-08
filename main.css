@@ -96,13 +96,13 @@ padding-right: 10px;
     width: 180px;
     
 }
-/* navigation, possibly will add two navigation for two media queries */
+/* Navigation*/
 .side-bar{
     grid-area: nav;
     
     }
 
-    /* main container */
+    /* Main Container */
     .mainBody {
         grid-area: main;
         display: grid;
@@ -198,10 +198,25 @@ padding-right: 10px;
    padding-right: 20px;
    
     }
-/* p{
-    margin-top: 8px;
- margin-bottom: 5px;
-} */
+
+
+/* New Members section */
+    .membersAndActivity{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-gap: 15% 5%;
+        
+
+    }
+.profile-image{
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+}
+
+
+
 
     /* desktop layout */
     

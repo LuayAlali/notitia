@@ -164,12 +164,14 @@ padding-right: 10px;
 .facebook{
     grid-area: facebook;
     display: inline-flex;
+    flex-direction: row;
     justify-content: center;
     
 }
 .twitter{
     grid-area: twitter;
     display: inline-flex;
+    flex-direction: row;
    justify-content: center;
 }
 .social-image1{
@@ -203,18 +205,58 @@ padding-right: 10px;
 /* New Members section */
     .membersAndActivity{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        grid-gap: 15% 5%;
+        grid-template-columns: 1fr ;
+        /* justify-items: center; */
+        grid-gap: 10px;
         
 
     }
+    .members-container-1{
+        display: grid;
+        max-height: 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "profile-image date"
+        "nameEmail .";
+    }
+    .members-container-2{
+        display: grid;
+        max-height: 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "profile-image date"
+        "nameEmail .";
+        margin-top: 10px;
+    }
+
 .profile-image{
     border-radius: 50%;
-    height: 15%;
-    width: 15%;
+    height: 40px;
+    width: 40px;
+    grid-area: profile-image;
+    margin-top: auto;
+}
+.members-text{
+    grid-area: nameEmail;
+    line-height: .5;
+    
+    
+}
+.members-text a{
+    text-decoration: none;
+    color: black;
 }
 
+.commentDate{
+    grid-area: date;
+    margin-top: auto;
+    margin-bottom: 0;
+    justify-self: end;
+}
+
+/* Recent Activity */
 
 
 

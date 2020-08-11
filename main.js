@@ -1,3 +1,5 @@
+// event listeners
+
 const alertBanner = document.getElementById("alert");
 alertBanner.innerHTML = `<div class="alert-banner"><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class="alert-banner-close">x</p></div>`;
 alertBanner.addEventListener('click', e =>{
@@ -6,6 +8,16 @@ alertBanner.addEventListener('click', e =>{
         alertBanner.style.display = 'none';
     }
 });  
+
+// const recentMembers = document.querySelector('.recent-member-1');
+// const arrow = document.querySelector('.arrow');
+// recentMembers.addEventListener('mouseover', () => {
+//         if(recentMembers.style.opacity === "0.4"){
+//             arrow.style.opacity = "0.4";
+//         } else {
+//             null
+//         }
+// });
 
 // line Graph
 let trafficCanvas = document.getElementById('traffic-chart');

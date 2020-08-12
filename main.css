@@ -110,8 +110,10 @@ padding-right: 10px;
         background-color: #ffffff;
         border-radius: 5px;
         color:black;
-       
-       
+       grid-template-columns: 1fr;
+       grid-template-areas: 
+       ""
+       ;
     }
     .dashboard{
        display: flex;
@@ -361,6 +363,7 @@ opacity: 0.4;
      background-color: whitesmoke;
      border-style: inset;
      border-color: rgba(26,26,26,.9);
+     border-bottom: none;
  }
  .form-field:focus{
     outline: 0;
@@ -392,6 +395,10 @@ opacity: 0.4;
  .button-primary:hover{
      opacity:  0.8;
  }
+/* Settings */
+/* check toggle-switch.css for toggle switches */
+
+  
 
     /* desktop layout */
     

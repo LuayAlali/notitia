@@ -278,7 +278,10 @@ opacity: 0.4;
 .members-action1{
     grid-area: member-action1;
     cursor: pointer;
+    grid-template-columns: 1fr 50px;
+    
 }
+
 
 .members-action2{
     grid-area: member-action2;
@@ -336,9 +339,59 @@ opacity: 0.4;
   .arrow1{
       grid-area: arrow1;
   }
-  
-
+  /* Message Section */
+ .widget-container{
+     display: grid;
+     margin-left: 20px;
+     margin-right: 20px;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr 3fr 50px;
+     grid-template-areas: 
+     "search"
+     "message"
+     "send";
+ }
  
+ .message > h3:nth-child(1) {
+     cursor: default;
+ }
+
+ .form-field{
+     grid-area: search;
+     background-color: whitesmoke;
+     border-style: inset;
+     border-color: rgba(26,26,26,.9);
+ }
+ .form-field:focus{
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(255 , 154, 77, 0.7);
+    
+ }
+ .form-area{
+     grid-area: message;
+     background-color: whitesmoke;
+     resize: none;
+     border-style: inset;
+     border-color: rgba(26,26,26,.9);
+ }
+ .form-area:focus{
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(255 , 154, 77, 0.7);
+ }
+ .button-primary{
+     grid-area: send;
+     cursor: pointer;
+     color:white;
+     background-color:  rgba(26,26,26,.9);
+     transition: opacity ease-in;
+ }
+ .button-primary:hover{
+     opacity:  0.8;
+ }
 
     /* desktop layout */
     

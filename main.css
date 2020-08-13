@@ -111,13 +111,22 @@ padding-right: 10px;
         border-radius: 5px;
         color:black;
        grid-template-columns: 1fr;
+       grid-template-rows: repeat(9, 1fr);
        grid-template-areas: 
-       ""
+       "dashboard "
+       "traffic"
+       "daily"
+       "mobile"
+       "social"
+       "membersAndActivity"
+       "settings"
+       "message"
        ;
     }
     .dashboard{
        display: flex;
        flex-direction: column;
+       grid-area: dashboard;
     }
     .alert{
        margin: auto;
@@ -128,6 +137,12 @@ padding-right: 10px;
        margin-left: 292px;
        cursor: pointer;
     }
+
+    /* Traffic Section */
+    .traffic{
+        grid-area: traffic;
+    }
+    
     .traffic-nav{
         list-style: none;
         display: grid;
@@ -150,7 +165,19 @@ padding-right: 10px;
 .widget-container-full {
     width: 95%;
 }
-.widget-container-half{
+/* Daily Section */
+
+.daily{
+grid-area: daily;
+}
+
+/* Mobile section */
+.mobile{
+    grid-area: mobile;
+}
+
+/* Widget for Daily  & Mobile */
+.widget-container-half{ 
     width: 95%;
 }
 
@@ -158,7 +185,7 @@ padding-right: 10px;
 .social-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
+    grid-area: social;
     grid-template-areas: 
     "facebook twitter"
     ;
@@ -210,7 +237,7 @@ padding-right: 10px;
         grid-template-columns: 1fr ;
         /* justify-items: center; */
         grid-gap: 10px;
-        
+        grid-area: membersAndActivity;
 
     }
     .members-container-1{
@@ -341,7 +368,107 @@ opacity: 0.4;
   .arrow1{
       grid-area: arrow1;
   }
+
+  /* Settings Section */
+/* check toggle-switch.css for toggle switches  styles*/
+
+/* Settings Container */
+  .settings{
+      grid-area: settings;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "settings-collection-1"
+      "settings-collection-2";
+      margin: 20px 10px ;
+      grid-gap: 20px;
+  }
+
+  /* settings-collection-1 Container */
+  .settings-collection-1{
+      grid-area: settings-collection-1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: 
+      "setting-1 switch-1"
+      "setting-2 switch-2"
+      ;
+  }
+  .switch-1{
+      grid-area: switch-1;
+  }
+  .switch-2{
+    grid-area: switch-2;
+}
+  .setting-1{
+      grid-area: setting-1;
+      align-self: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+}
+  
+  .setting-2{
+    grid-area: setting-2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+  /* settings-collection-2 Container */
+  .settings-collection-2{
+    display: grid;
+    grid-area: settings-collection-2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "time-zone"
+    "settings-buttons";
+    justify-items: center;
+}
+.time-zone{
+    grid-area: time-zone;
+    max-width: 60%;
+}
+.settings-buttons{
+ grid-area: settings-buttons;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
+ grid-template-areas: 
+ "button-save button-cancel"
+ ;
+ 
+}
+.button-save{
+    grid-area: button-save;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(255 , 154, 77, 0.7);
+    transition: opacity .2s ease-in;
+    cursor: pointer;
+}
+.button-save:hover{
+    opacity: 0.8;
+}
+.button-cancel{
+    grid-area: button-cancel;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    transition: opacity .2s ease-in;
+    cursor: pointer;
+}
+.button-cancel:hover{
+    opacity: 0.8;
+}
+
   /* Message Section */
+  .message{
+      grid-area: message;
+  }
  .widget-container{
      display: grid;
      margin-left: 20px;
@@ -395,8 +522,7 @@ opacity: 0.4;
  .button-primary:hover{
      opacity:  0.8;
  }
-/* Settings */
-/* check toggle-switch.css for toggle switches */
+
 
   
 

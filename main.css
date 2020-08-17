@@ -28,6 +28,7 @@
 /* header, main, navigation */
 
 /* header */
+
 .app-header{
     margin-top: 10px;
     grid-area: header;
@@ -44,20 +45,10 @@
     font-size: 20px;
     margin-top: 4px;
 }
-#Layer_1{
-    grid-area: bell;
-    margin-top: 20px;
-    padding-right: 10px;
-    
-    
-   
-   
-}
 
-/* .notification{
-grid-area: notification;
 
-} */
+/* Profile name, picture */
+
 .profile-picture, .profileName{
     grid-area: profile;
     margin-top: 7px;
@@ -75,27 +66,16 @@ grid-area: notification;
     margin-left: 50px;
 }
 
-.headline{
-padding-right: 10px;
+
+/* bell icon */
+#Layer_1{
+    grid-area: bell;
+    margin-top: 20px;
+    padding-right: 10px;
 }
-.searchBar{
-    height: 35px;
-    width: 150px;
-    border-radius: 10px;
-    border: 1% 1% 1% 1%;
-    border-color: rgba(0, 0, 0, 0.2); 
-    border-style: solid;
-    transition: width .3s ease-in;
-  
-}
-.searchBar:focus{
-    /* border-color: #7a7a7a; */
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 180px;
-    
-}
+
+
+
 /* Navigation*/
 .side-bar{
     grid-area: nav;
@@ -124,10 +104,69 @@ padding-right: 10px;
        ;
     }
     .dashboard{
-       display: flex;
-       flex-direction: column;
-       grid-area: dashboard;
+      display: grid;
+      grid-template-columns: 1fr 20px;
+      grid-template-rows: 1fr .5fr 80px;
+     grid-area: dashboard;
+     margin-bottom: 50px;
+     grid-template-areas: 
+     "headline"
+     "searchBar"
+     "alert";
     }
+    .headline{
+        grid-area: headline;
+        padding-left: 10px;
+    }
+    .searchBar{
+        grid-area: searchBar;
+        margin-left: 15px;
+    }
+
+.alert{
+    grid-area: alert;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "alert-banner close";
+    border: solid black;
+    color: white;
+    background: rgba(26,26,26,.9);
+    border-radius: 5px;
+   margin: auto;
+   width: 95%;
+   justify-self: center;
+}
+
+    .alert-banner{
+        grid-area: alert-banner;
+        
+    }
+    .close{
+        grid-area: close;
+        margin: auto;
+        cursor: pointer;
+       
+    }
+        .searchBar{
+            height: 35px;
+            width: 150px;
+            border-radius: 10px;
+            border: 1% 1% 1% 1%;
+            border-color: rgba(0, 0, 0, 0.4); 
+            border-style: solid;
+            transition: width .3s ease-in;
+          
+        }
+        .searchBar:focus{
+            /* border-color: #7a7a7a; */
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            width: 180px;
+            
+        }
     .alert{
        margin: auto;
        cursor: default;    
@@ -526,45 +565,90 @@ opacity: 0.4;
 
   
 
-    /* desktop layout */
+    /* tablet layout */
     
     @media (min-width: 768px) {
+        
+        /* body container */
         .grid-container {
             grid-template-rows:  15% 1fr ;
-            grid-template-columns: 55px 1fr ;
+            grid-template-columns: 85px 1fr ;
             grid-template-areas: 
-                "header dashboard"
-                "nav main";
-                overflow: auto;
+              "header header"
+              "nav main"
+
                
         }
         
+        .app-header{
+            margin-top: 20px;
+            grid-template-columns: 1fr 40px 150px;
+        }
+
+        .appName{
+            
+            margin-top: 0;
+            font-size: 30px;
+            margin-left: 15px;
+        }
+        #Layer_1{
+            margin-top: 20px;
+            padding-right: 10px;
+        }
+
+
+        .profile-picture, .profileName{
+            grid-area: profile;
+            margin-top: 7px;
+            cursor: default;
+        }
+        .profile-picture{
+            height: 43px;
+            width: 43px;
+            border-radius: 20px;
+            margin-top: 0;
+        }
+       
+
         .mainBody{
             grid-template-columns: 1fr 1fr;
-            grid-template-rows:8% 2fr 2fr 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr 2fr 1fr 1fr; 
+            grid-template-areas: 
+            "dashboard  dashboard"
+            "traffic traffic"
+            "daily mobile"
+            "social social"
+            "membersAndActivity membersAndActivity"
+            "message settings"
+            
+            ;
             overflow-y: scroll;
             
-        }
-        .dashboard, .traffic,  .social-container {
-             grid-column: 1 / span 2;
-          }
-          .daily, .message, .user, .members{
-              grid-column:  1 / span 1;
-          }
-          .mobile, .recent-activity, .settings {
-             grid-column: 2 / span 1;
-            
-          }
-          .widget-container-full{
-            width: 70%;
-            
-        }
-         .widget-container-half{
-             width: 50%;
-            
+     
          }
-         
-         
+         .dashboard{
+            display: grid;
+            grid-template-columns: .5fr 1fr;
+            grid-template-rows: 1fr 1fr;
+           grid-area: dashboard;
+           margin-bottom: 50px;
+           grid-template-areas: 
+           "headline headline"
+           "searchBar alert"
+           ;
+          }
+         .searchBar{
+            align-self: center;
+         }
+         .alert{
+             height: 35px;
+             align-items: center;
+         }
+         .alert-banner > p:nth-child(1) {
+            margin-top: 0px;
+            margin-bottom: 0px;
+           }
+           
     }
 
     

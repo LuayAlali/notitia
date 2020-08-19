@@ -105,23 +105,23 @@
     }
     .dashboard{
       display: grid;
-      grid-template-columns: 1fr 20px;
+      grid-template-columns: 1fr;
       grid-template-rows: 1fr .5fr 80px;
      grid-area: dashboard;
      margin-bottom: 50px;
      grid-template-areas: 
      "headline"
-     "searchBar"
+     "search-back"
      "alert";
     }
     .headline{
         grid-area: headline;
         padding-left: 10px;
     }
-    .searchBar{
-        grid-area: searchBar;
-        margin-left: 15px;
+    .search-back{
+        grid-area: search-back;
     }
+    
 
 .alert{
     grid-area: alert;
@@ -203,16 +203,19 @@
    
 .widget-container-full {
     width: 95%;
+    padding-left: 5%;
 }
 /* Daily Section */
 
 .daily{
 grid-area: daily;
+padding-left: 5%;
 }
 
 /* Mobile section */
 .mobile{
     grid-area: mobile;
+    padding-left: 5%;
 }
 
 /* Widget for Daily  & Mobile */
@@ -277,7 +280,8 @@ grid-area: daily;
         /* justify-items: center; */
         grid-gap: 10px;
         grid-area: membersAndActivity;
-
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .members-container-1{
         display: grid;
@@ -408,6 +412,8 @@ opacity: 0.4;
       grid-area: arrow1;
   }
 
+
+  /*  */
   /* Settings Section */
 /* check toggle-switch.css for toggle switches  styles*/
 
@@ -421,6 +427,8 @@ opacity: 0.4;
       "settings-collection-2";
       margin: 20px 10px ;
       grid-gap: 20px;
+      padding-left: 5%;
+      padding-right: 5%;
   }
 
   /* settings-collection-1 Container */
@@ -513,11 +521,16 @@ opacity: 0.4;
      margin-left: 20px;
      margin-right: 20px;
      grid-template-columns: 1fr;
-     grid-template-rows: 1fr 3fr 50px;
+     grid-template-rows:  50px 1fr 3fr 40px;
      grid-template-areas: 
+     "message-header"
      "search"
      "message"
      "send";
+ }
+ .message-header{
+     grid-area: message-header;
+   
  }
  
  .message > h3:nth-child(1) {
@@ -633,12 +646,25 @@ opacity: 0.4;
            grid-area: dashboard;
            margin-bottom: 50px;
            grid-template-areas: 
-           "headline headline"
-           "searchBar alert"
+           "headline search-back"
+           "alert alert"
            ;
+          }
+          .search-back{
+              background-color: rgba(212, 210 , 209, 0.3);
+              border: 1px solid rgba(212, 210 , 209, 0.8);
+              border-right: none;
+              display: grid;
+              
           }
          .searchBar{
             align-self: center;
+            justify-self: end;
+            width: 45%;
+            margin-right: 2%;
+         }
+         .searchBar:focus{
+             width: 55%;
          }
          .alert{
              height: 35px;
@@ -649,6 +675,44 @@ opacity: 0.4;
             margin-bottom: 0px;
            }
            
+           
+           
+           .settings{
+               grid-gap: 0;
+               
+               margin-top: 2%;
+           }
+           .widget-container{
+               align-self: start;
+           }
+        
+    }
+
+    @media(min-width: 1024px){
+        .grid-container{
+            grid-template-rows: 20% 1fr;
+        }
+        .membersAndActivity{
+            grid-template-areas: 
+            "members recent-activity"
+            ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        }
+            .members{
+                grid-area: members;
+            }    
+            .recent-activity{
+                grid-area: recent-activity;
+            }
+
+
+
+
+
+
+
     }
 
     

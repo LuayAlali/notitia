@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -17,11 +17,12 @@
    overflow: hidden;
    height: 100vh;
    width: 100vw;
-   max-width: 1800px;
+   max-width: 1600px;
    margin: auto;
    padding: 0px 5px 15px 5px;
    background-color: rgba(26,26,26,.9);
    color: white;
+   font-family: 'Ubuntu', sans-serif;
    
 }
 
@@ -91,7 +92,7 @@
         border-radius: 5px;
         color:black;
        grid-template-columns: 1fr;
-       grid-template-rows: repeat(9, 1fr);
+       grid-template-rows: repeat(8, 1fr);
        grid-template-areas: 
        "dashboard "
        "traffic"
@@ -99,9 +100,10 @@
        "mobile"
        "social"
        "membersAndActivity"
-       "settings"
-       "message"
+       "messageAndSettings"
+       "messageAndSettings"
        ;
+       max-width: 1500px;
     }
     .dashboard{
       display: grid;
@@ -117,6 +119,7 @@
     .headline{
         grid-area: headline;
         padding-left: 10px;
+        padding-left: 5%;   
     }
     .search-back{
         grid-area: search-back;
@@ -157,7 +160,9 @@
             border-color: rgba(0, 0, 0, 0.4); 
             border-style: solid;
             transition: width .3s ease-in;
-          
+            margin-left: 5%;
+    
+               
         }
         .searchBar:focus{
             /* border-color: #7a7a7a; */
@@ -180,14 +185,22 @@
     /* Traffic Section */
     .traffic{
         grid-area: traffic;
+        border-top-style: inset;
+        border-top-width: 1px;
+        margin-right: 5%;
+        margin-left: 5%;
     }
-    
+    .traffic-header > h3:nth-child(1) {
+        padding-left: 5%;
+       }
+       
     .traffic-nav{
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
-        
+        padding-left: 5%;
+        padding-right: 5%;   
     }
     .traffic-nav-link{
         padding: 5px 8px 5px 8px;
@@ -202,21 +215,32 @@
     }
    
 .widget-container-full {
-    width: 95%;
+    width: 90%;
     padding-left: 5%;
 }
 /* Daily Section */
 
 .daily{
 grid-area: daily;
-padding-left: 5%;
+margin-left: 5%;
+margin-right: 5%;
+padding-top: 5%;
+border-top-style: inset;
+        border-top-width: 1px;
+        margin-top: 5%;
 }
 
 /* Mobile section */
 .mobile{
     grid-area: mobile;
-    padding-left: 5%;
+    border-top-style: inset;
+    border-top-width: 1px;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
+    
+
 
 /* Widget for Daily  & Mobile */
 .widget-container-half{ 
@@ -234,39 +258,53 @@ padding-left: 5%;
 }
 .facebook{
     grid-area: facebook;
-    display: inline-flex;
-    flex-direction: row;
+    display: grid;
     justify-content: center;
+    grid-template-columns: 1fr 50%;
+    grid-template-areas: 
+    "social-image1 social-text1"
+    ;
     
 }
 .twitter{
     grid-area: twitter;
-    display: inline-flex;
-    flex-direction: row;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 50%;
+    grid-template-areas: 
+    "social-image2 social-text2"
+    ;
+   
    justify-content: center;
 }
 .social-image1{
+    grid-area: social-image1;
     align-self: center;
 }
 .social-image2{
     align-self: center;
+    grid-area: social-image2;
+    width: 100%;
+    padding-right: 0;
 }
 #facebook{
     height: 39%;
     width: 39%;
-    margin-left: 40px;
+    margin-left: 35%;
 }
 #twitter{
-    height: 30%;
-    width: 30%;
-    margin-left: 40px;
+    height: 28%;
+    width: 28%;
+    margin-left: 35%;
    
 }
 .social-text1{
+    grid-area: social-text1;
     align-self: center;
     padding-right: 20px;
 }
 .social-text2{
+    grid-area: social-text2;
     align-self: center;
    padding-right: 20px;
    
@@ -282,6 +320,12 @@ padding-left: 5%;
         grid-area: membersAndActivity;
         padding-left: 5%;
         padding-right: 5%;
+       
+    }
+    .members{
+        border-top-style: inset;
+        border-top-width: 1px;
+        margin-top: 5%;
     }
     .members-container-1{
         display: grid;
@@ -337,6 +381,12 @@ padding-left: 5%;
     "header-recent ."
     "member-action1 arrow"
     "member-action2 arrow1";
+    border-top-style: inset;
+    border-top-width: 1px;
+    margin-top: 5%;
+        margin-top: 5%;
+        border-left: none;
+
 }
 .header-recent{
     grid-area: header-recent;
@@ -418,17 +468,34 @@ opacity: 0.4;
 /* check toggle-switch.css for toggle switches  styles*/
 
 /* Settings Container */
-  .settings{
+.messageAndSettings{
+    grid-area: messageAndSettings;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "settings"
+    "message";
+    
+}  
+
+
+.settings{
       grid-area: settings;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: 
       "settings-collection-1"
       "settings-collection-2";
-      margin: 20px 10px ;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-top: 5%;
       grid-gap: 20px;
       padding-left: 5%;
       padding-right: 5%;
+      border-top-style: inset;
+      border-top-width: 1px;
+    
   }
 
   /* settings-collection-1 Container */
@@ -493,7 +560,7 @@ opacity: 0.4;
     height: 30px;
     border-radius: 4px;
     color: white;
-    background-color: rgba(255 , 154, 77, 0.7);
+    background-color: rgba(242 , 170, 76, 1);
     transition: opacity .2s ease-in;
     cursor: pointer;
 }
@@ -515,11 +582,9 @@ opacity: 0.4;
   /* Message Section */
   .message{
       grid-area: message;
-  }
- .widget-container{
      display: grid;
-     margin-left: 20px;
-     margin-right: 20px;
+     margin-left: 5%;
+     margin-right: 5%;
      grid-template-columns: 1fr;
      grid-template-rows:  50px 1fr 3fr 40px;
      grid-template-areas: 
@@ -527,6 +592,9 @@ opacity: 0.4;
      "search"
      "message"
      "send";
+     border-top-style: inset;
+     border-top-width: 1px;
+     margin-top: 5%;
  }
  .message-header{
      grid-area: message-header;
@@ -548,7 +616,7 @@ opacity: 0.4;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: rgba(255 , 154, 77, 0.7);
+    border-color: rgba(242 , 170, 76, 1);
     
  }
  .form-area{
@@ -562,13 +630,13 @@ opacity: 0.4;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: rgba(255 , 154, 77, 0.7);
+    border-color: rgba(242 , 170, 76, 0.7);
  }
  .button-primary{
      grid-area: send;
      cursor: pointer;
      color:white;
-     background-color:  rgba(26,26,26,.9);
+     background-color:  rgba(242 , 170, 76, 1);
      transition: opacity ease-in;
  }
  .button-primary:hover{
@@ -585,7 +653,7 @@ opacity: 0.4;
         /* body container */
         .grid-container {
             grid-template-rows:  15% 1fr ;
-            grid-template-columns: 85px 1fr ;
+            grid-template-columns: 10% 1fr ;
             grid-template-areas: 
               "header header"
               "nav main"
@@ -625,26 +693,26 @@ opacity: 0.4;
 
         .mainBody{
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 2fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr ; 
             grid-template-areas: 
             "dashboard  dashboard"
             "traffic traffic"
             "daily mobile"
             "social social"
             "membersAndActivity membersAndActivity"
-            "message settings"
+            "messageAndSettings messageAndSettings"
             
             ;
             overflow-y: scroll;
-            
+        
      
          }
          .dashboard{
             display: grid;
-            grid-template-columns: .5fr 1fr;
+            grid-template-columns: .3fr 1fr;
             grid-template-rows: 1fr 1fr;
            grid-area: dashboard;
-           margin-bottom: 50px;
+           margin-bottom: 5%;
            grid-template-areas: 
            "headline search-back"
            "alert alert"
@@ -675,15 +743,27 @@ opacity: 0.4;
             margin-bottom: 0px;
            }
            
-           
-           
+           .messageAndSettings{
+            margin-top: 5%;  
+            margin-right: 5%;
+            margin-left: 5%;
+            grid-template-areas: "settings message";
+            padding: 5%;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            border-top-style: inset;
+            border-top-width: 1px;
+           }
+          
            .settings{
                grid-gap: 0;
-               
-               margin-top: 2%;
+               margin-bottom: 0;
+               margin-top: auto;
+               border: none;
+              
            }
-           .widget-container{
-               align-self: start;
+           .message{
+               border: none;
            }
         
     }
@@ -700,13 +780,26 @@ opacity: 0.4;
         grid-template-rows: 1fr;
 
         }
+        .traffic{
+            border: none;
+        }
+        .daily{
+            border: none;
+        }
+        .mobile{
+            border: none;  
+        }
             .members{
                 grid-area: members;
+                border: none;
             }    
             .recent-activity{
                 grid-area: recent-activity;
+                border: none;
             }
+            
 
+            
 
 
 

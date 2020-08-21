@@ -51,7 +51,7 @@ let trafficData = {
     datasets:[{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
-            backgroundColor: 'rgba(255, 217, 114, .6)',
+            // backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
     }]
 
@@ -61,7 +61,7 @@ let trafficData2 = {
     labels: ["0","1-3", "4-6", "7-9", "10-13", "14-17", "18-21", "22-24"],
     datasets:[{
         data: [50, 120, 70, 300, 425, 630, 2040, 700],
-            backgroundColor: 'rgba(255, 217, 114, .6)',
+            // backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
 }]
 };
@@ -70,7 +70,7 @@ let trafficData3 = {
     labels: ["M","T", "W", "Th", "F", "S", "Su"],
     datasets:[{
         data: [260, 320, 120, 600, 425, 1200, 2300],
-            backgroundColor: 'rgba(255, 217, 114, .6)',
+            // backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
 }]
 };
@@ -80,7 +80,7 @@ let trafficData5 = {
     labels: ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sept", "Oct", "Nov", "Dec"],
     datasets:[{
         data: [3000, 3500, 4200, 4800, 5100, 5600, 5700, 6200, 6500, 6800, 7200, 7300],
-            backgroundColor: 'rgba(255, 217, 114, .6)',
+            // backgroundColor: 'rgba(255, 217, 114, .6)',
             borderWidth: 1
 }]
 };
@@ -155,7 +155,7 @@ const dailyData = {
     datasets: [{
         label: '# of Hits',
         data: [75, 115, 175, 125, 225, 200, 100],
-        backgroundColor: '#7298ff',
+        backgroundColor:  'rgba(26,26,26,.9)',
         borderWidth: 1
     }]
 
@@ -198,12 +198,12 @@ const mobileData = {
     data: [2000, 550, 500],
     borderWidth: 1,
     hoverBackgroundColor: [
-        'rgba(255, 147, 114, 1)',
+        'rgba(242 , 170, 76, 1)',
         'rgba(222,199,255,1)',
         '#6aa5af'
     ],
     backgroundColor: [
-    'rgba(255, 147, 114, .6)',
+    'rgba(242 , 170, 76, 0.5)',
     'rgba(222,199,255,.6)',
     '#51B6C8'
     ],

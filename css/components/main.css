@@ -1,0 +1,1 @@
+*{box-sizing:border-box;font-family:'Ubuntu', sans-serif}.grid-container{display:grid;grid-template-columns:.3fr 1fr;grid-template-rows:repeat(auto, 1fr);grid-template-areas:"app-header app-header" "main-body main-body" "nav-bar nav-bar"}.app-header{grid-area:app-header}.nav-bar{grid-area:nav-bar}.main-body{grid-area:main-body}

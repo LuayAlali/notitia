@@ -1,0 +1,1 @@
+.main-wrapper{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(auto, 1fr);grid-template-areas:"dashboard" "traffic" "daily" "mobile" "social-container" "members" "recent-activity" "message" "settings"}

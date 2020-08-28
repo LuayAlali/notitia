@@ -91,7 +91,7 @@
         background-color: #ffffff;
         border-radius: 5px;
         color:black;
-       grid-template-columns: 1fr;
+       grid-template-columns: .7fr;
        grid-template-rows: repeat(8, 1fr);
        grid-template-areas: 
        "dashboard "
@@ -107,7 +107,7 @@
     }
     .dashboard{
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: .4fr;
       grid-template-rows: 1fr .5fr 80px;
      grid-area: dashboard;
      margin-bottom: 50px;
@@ -137,7 +137,7 @@
     color: white;
     background: rgba(26,26,26,.9);
     border-radius: 5px;
-   margin: auto;
+   
    width: 95%;
    justify-self: center;
 }
@@ -154,7 +154,7 @@
     }
         .searchBar{
             height: 35px;
-            width: 150px;
+            width: 30%;
             border-radius: 10px;
             border: 1% 1% 1% 1%;
             border-color: rgba(0, 0, 0, 0.4); 
@@ -186,9 +186,19 @@
     .traffic{
         grid-area: traffic;
         border-top-style: inset;
+        grid-template-columns: .5fr;
+        grid-template-rows: 1fr 1fr 3fr;
+        grid-template-areas: 
+        "traffic-header"
+        "traffic-nav"
+        "widget-container-full";
         border-top-width: 1px;
-        margin-right: 5%;
-        margin-left: 5%;
+        
+        
+        /* width: 80%; */
+    }
+    .traffic-header{
+        grid-area: traffic-header;
     }
     .traffic-header > h3:nth-child(1) {
         padding-left: 5%;
@@ -197,10 +207,11 @@
     .traffic-nav{
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, );
         justify-items: center;
         padding-left: 5%;
         padding-right: 5%;   
+        grid-area: traffic-nav;
     }
     .traffic-nav-link{
         padding: 5px 8px 5px 8px;
@@ -215,8 +226,9 @@
     }
    
 .widget-container-full {
-    width: 90%;
+    width: 70%;
     padding-left: 5%;
+    grid-area: widget-container-full;
 }
 /* Daily Section */
 
@@ -236,21 +248,21 @@ border-top-style: inset;
     border-top-style: inset;
     border-top-width: 1px;
     margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    /* margin-right: 5%;
+    margin-left: 5%; */
 }
     
 
 
 /* Widget for Daily  & Mobile */
 .widget-container-half{ 
-    width: 95%;
+    width: 50%;
 }
 
 /* Social Container */
 .social-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .4fr .4fr;
     grid-area: social;
     grid-template-areas: 
     "facebook twitter"
@@ -314,7 +326,7 @@ border-top-style: inset;
 /* New Members section */
     .membersAndActivity{
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: .7fr ;
         /* justify-items: center; */
         grid-gap: 10px;
         grid-area: membersAndActivity;
@@ -375,7 +387,7 @@ border-top-style: inset;
 /* Recent Activity */
 .recent-activity{
     display: grid;
-    grid-template-columns:1fr 50px;
+    grid-template-columns:.7fr 50px;
     grid-template-rows:  50px 1fr 1fr;
     grid-template-areas:
     "header-recent ."
@@ -471,7 +483,7 @@ opacity: 0.4;
 .messageAndSettings{
     grid-area: messageAndSettings;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: .7fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "settings"
@@ -483,12 +495,12 @@ opacity: 0.4;
 .settings{
       grid-area: settings;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: .7fr;
       grid-template-areas: 
       "settings-collection-1"
       "settings-collection-2";
-      margin-left: 5%;
-      margin-right: 5%;
+      /* padding-left: 5%;
+      padding-right: 5%; */
       padding-top: 5%;
       grid-gap: 20px;
       padding-left: 5%;
@@ -585,7 +597,7 @@ opacity: 0.4;
      display: grid;
      margin-left: 5%;
      margin-right: 5%;
-     grid-template-columns: 1fr;
+     grid-template-columns: .7fr;
      grid-template-rows:  50px 1fr 3fr 40px;
      grid-template-areas: 
      "message-header"
@@ -742,7 +754,25 @@ opacity: 0.4;
             margin-top: 0px;
             margin-bottom: 0px;
            }
-           
+           .traffic{
+               margin: 0;
+               padding: 0 5%;
+               border-bottom: inset 1px;
+           }
+           .daily{
+               padding-top: 0;
+               border-top: none;
+               margin: 0;
+               padding: 5% 5% 0 5%;
+               border-bottom: inset 1px;
+           }
+           .mobile{
+               border-top: none;
+               margin: 0;
+               padding: 5% 5% 0 5%;
+               border-left: inset 1px;
+               border-bottom: inset 1px;
+           }
            .messageAndSettings{
             margin-top: 5%;  
             margin-right: 5%;

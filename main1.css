@@ -1,0 +1,125 @@
+/* mobile layout */
+
+/* main components */
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 8%;
+    grid-template-areas: 
+    "app-header"
+    "main-wrapper"
+    "nav-bar"
+    ;
+    
+    width: 100vw;
+    height: 100vh;
+    max-width: 1600px;
+    margin: auto;
+    /* background-color: rgba(26,26,26,.9); */
+    /* color: white; */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.nav-bar{
+    grid-area: nav-bar;
+}
+
+
+
+/* header components */
+.app-header{
+    grid-area: app-header;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3% 10%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "app-name bell profile";
+}
+
+
+
+.app-name{
+    grid-area: app-name;
+    margin-top: 0;
+    font-size: 20px;
+    margin-top:4px;
+}
+
+.bell{
+    grid-area: bell;
+}
+
+.profile-picture, .profile-name{
+    grid-area: profile;
+    margin-top: 7px;
+}
+.profile-picture{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    margin-top: 0;
+}
+
+.profile-name{
+    margin-bottom: 0;
+    padding-bottom: 0;
+     
+}
+
+/* main wrapper */
+
+.main-wrapper{
+    grid-area: main-wrapper;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas: 
+        "dashboard"
+        "traffic"
+        "daily"
+        "mobile"
+        "social-container"
+        "members"
+        "recent-activity"
+        "message"
+        "settings";
+    }
+
+    .dashboard{
+        grid-area: dashboard;
+    }
+    .traffic{
+        grid-area: traffic;
+    }
+    .daily{
+        grid-area: daily;
+    }
+
+    .mobile{
+        grid-area: mobile;
+    }
+    .social-container{
+        grid-area:social-container;
+    }
+    .members{
+        grid-area:members;
+    }
+    .recent-activity{
+        grid-area:recent-activity;
+    }
+
+    .message{
+        grid-area:message;
+    }
+    .settings{
+        grid-area:settings;
+    }

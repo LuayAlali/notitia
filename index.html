@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="toggle-switch.css">
 	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ubuntu&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="main1.css">
 	<link rel="stylesheet" href="svgs.css" >
 <title>Web App Dashboard</title>
 </head>
@@ -16,12 +16,12 @@
 <!-- BODY CONTAINER -->
 <body class="grid-container"> 
 	<header class="app-header">
-			<h1 class="appName">notitia</h1>
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			<h1 class="app-name">notitia</h1>
+			<svg class="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<!-- <style type="text/css">
+<style type="text/css">
 	.st0{fill:#231F20;}
-</style> -->
+</style>
 <g id="_x36__6_">
 	<g>
 		<path class="st0" d="M25,19.9v-7.5c0-5.1-4.5-9.3-10-9.3c-5.5,0-10,4.2-10,9.3l0,7.5l-4,7.5l9.1,0c0.5,2.1,2.5,3.7,4.9,3.7
@@ -33,12 +33,12 @@
 </svg>
 			<!-- <div class="notification">Notification</div> -->
 			
-		<img  class="profile-picture" src="images/member-4.jpg" alt="profile picture"><h4 class="profileName">Adam Smith</h4>
+		<img  class="profile-picture" src="images/member-4.jpg" alt="profile picture"><h4 class="profile-name">Adam Smith</h4>
 		
 	</header>
 		
 		
-	<nav class="side-bar">
+	<nav class="nav-bar">
 		<a href=""><img src=""  class="icon1"></a>
 		<a href=""><img src=""  class="icon2"></a>
 		<a href=""><img src=""  class="icon3"></a>
@@ -48,7 +48,7 @@
 	
 
 	<!-- MAIN CONTAINER -->
-	<main class="mainBody">
+	<main class="main-wrapper">
 		
 
 		<!-- Dashboard -->
@@ -59,10 +59,7 @@
 			<input  class="searchBar" type="search" placeholder="Search"/>
 		</div>
 				<div class="alert" id="alert">
-					<!-- <div class="alert-banner">
-						<p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-					</div>
-						<div class="close"><p>x</p></div>  -->
+					<!-- javascript -->
 				</div>
 			</div>
 		
@@ -74,35 +71,36 @@
 		<section class="traffic">
 			<div class="traffic-header">
 				<h3>Traffic</h3>
+			</div>
 			<ul class="traffic-nav">
 			<li class="traffic-nav-link"><a class="traffic-data2">Hourly</a></li>
 			<li class="traffic-nav-link"><a class="traffic-data3">Daily</a></li>
 			<li class="traffic-nav-link"><a class="traffic-data">Weekly</a></li>
 			<li class="traffic-nav-link"><a class="traffic-data5">Monthly</a></li>
 				</ul>
-				</div>
-			<div class="widget-container-full">
+				
+			<!-- <div class="widget-container-full">
 				
 				<canvas id="traffic-chart"></canvas>
-				</div>
+				</div> -->
 		</section>
 		
 		<!-- DAILY TRAFFIC -->
 	<section class="daily">
 		<h3>Daily Traffic</h3> 
 		<!-- /*2r, 1cdsk,tab: 1r,2c */ -->
-	 <div class="widget-container-half">
+	 <!-- <div class="widget-container-half">
 		<canvas id="daily-chart"></canvas>
-	 </div>
+	 </div> -->
 	</section>
 
 	<!-- MOBILE DATA -->
 	<section class="mobile">
 		<h3>Mobile Users</h3>
 <!-- /*2r, 1cdsk,tab: 1r,2c */ -->
-	<div class="widget-container-half">
+	<!-- <div class="widget-container-half">
 		<canvas id="mobile-users"></canvas>
-	</div>
+	</div> -->
 	</section>
 
 
@@ -110,7 +108,7 @@
 	<div class="social-container">
 		<section class="facebook">
 			<div class="social-image1">
-				<svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<!-- <svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		viewBox="0 0 56.7 56.7" style="enable-background:new 0 0 56.7 56.7;" xml:space="preserve">
 	<style type="text/css">
 		.st2{fill:rgba(242 , 170, 76, 1);}
@@ -121,14 +119,14 @@
 		c0,5.3,0,11.6,0,11.6h4.8c0,0,0-6.4,0-11.6h3.3L34.2,21.8z"/>
 	</svg>
 
-			</div>
+			</div> -->
 			<div class="social-text1">
 				<p>10,300</p>
 			</div>
 	</section>
 
 		<section class="twitter">
-		<div class="social-image2">
+		<!-- <div class="social-image2">
 			<svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 	   <style type="text/css">
@@ -142,7 +140,7 @@
 		   c-1.5,1.2-3.5,1.9-5.7,1.8c-0.3,0-0.8,0-1.1-0.1c2,1.3,4.4,2.1,6.9,2.2c8.3,0.1,13-6.7,13.1-12.7c0-0.2,0-0.4,0-0.6
 		   C26,11,26.8,10.2,27.4,9.3z"/>
 	   </svg>
-	   </div>
+	   </div> -->
 		<div class="social-text2">
 			
 			<p>10,300</p>
@@ -150,7 +148,7 @@
 	</section>
 	</div>
 		<!--  NEW MEMBERS  -->
-		<div class="membersAndActivity">
+		
 		<section class="members">
 			<h3>New Members</h3>
 			<!-- replace _blank with profile images -->
@@ -191,8 +189,9 @@
 
 			
 			</div>
+			<span class="arrow"></span>
 		</div>
-		<span class="arrow"></span>
+		
 
 			<div class="members-action2">
 				<div class="recent-member-2">
@@ -203,14 +202,15 @@
 				</div>
 				<p class="time-of-action">1 day ago</p>
 			</div>
-		</div>
 			<span class="arrow1"></span>
+		</div>
+			
 		
 		</section>
-	</div>
+	
 
 	<!-- Message Section -->
-<div class="messageAndSettings">
+
 		<form class="message">	
 			<h3 class="message-header">Message User</h3>
 			<input type="text" class="form-field" id="userField" placeholder="Search for user">
@@ -347,7 +347,7 @@
 		</div>
 	</div>
 </div>
-</div>
+
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 	<script src="main.js"></script>

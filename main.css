@@ -92,7 +92,7 @@
         border-radius: 5px;
         color:black;
        grid-template-columns: 1fr;
-       grid-template-rows: repeat(8, 1fr);
+       grid-template-rows: repeat(9, 1fr);
        grid-template-areas: 
        "dashboard "
        "traffic"
@@ -315,7 +315,10 @@ border-top-style: inset;
     .membersAndActivity{
         display: grid;
         grid-template-columns: 1fr ;
-        /* justify-items: center; */
+        grid-template-rows:  1fr 1fr;
+        grid-template-areas: 
+        "members"
+        "recent-activity";
         grid-gap: 10px;
         grid-area: membersAndActivity;
         padding-left: 5%;
@@ -326,8 +329,12 @@ border-top-style: inset;
         border-top-style: inset;
         border-top-width: 1px;
         margin-top: 5%;
+        grid-area: members;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
     .members-container-1{
+        grid-area: members-container-1;
         display: grid;
         max-height: 100px;
         grid-template-columns: 1fr 1fr;
@@ -375,6 +382,7 @@ border-top-style: inset;
 /* Recent Activity */
 .recent-activity{
     display: grid;
+    grid-area: recent-activity;
     grid-template-columns:1fr 50px;
     grid-template-rows:  50px 1fr 1fr;
     grid-template-areas:
@@ -778,17 +786,38 @@ opacity: 0.4;
             ;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-
+        border-top: 1px inset;
+        
         }
         .traffic{
-            border: none;
+            margin: 0;
+            border-bottom: 1px inset;
+            padding: 0 5%;
+            margin: 0;
         }
         .daily{
             border: none;
+            margin: 0;
+            padding: 0 5%;
+            border-bottom: 1px inset;
         }
         .mobile{
-            border: none;  
+           
+            border-top: none;
+                padding: 0 5%;
+                border-left: inset 1px;
+                border-bottom: 1px inset;
+            
         }
+
+        #mobile-users {
+            padding-bottom: 2%;
+           }
+           
+           #daily-chart {
+            padding-bottom: 2%;
+           }
+           
             .members{
                 grid-area: members;
                 border: none;

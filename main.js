@@ -199,12 +199,12 @@ const mobileData = {
     borderWidth: 1,
     hoverBackgroundColor: [
         'rgba(242 , 170, 76, 1)',
-        'rgba(222,199,255,1)',
+        'rgba(233,75,60,1)',
         '#6aa5af'
     ],
     backgroundColor: [
-    'rgba(242 , 170, 76, 0.5)',
-    'rgba(222,199,255,.6)',
+    'rgba(242 , 170, 76, 0.7)',
+    'rgba(233,75,60,0.7)',
     '#51B6C8'
     ],
     }]

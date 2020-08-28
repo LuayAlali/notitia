@@ -4,10 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="normalize.css">
-	
 	<link rel="stylesheet" href="toggle-switch.css">
-	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ubuntu&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="svgs.css" >
 <title>Web App Dashboard</title>
@@ -113,7 +110,7 @@
 				<svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		viewBox="0 0 56.7 56.7" style="enable-background:new 0 0 56.7 56.7;" xml:space="preserve">
 	<style type="text/css">
-		.st2{fill:rgba(242 , 170, 76, 1);}
+		.st2{fill:#0A0035;}
 		.st3{fill:#FFFFFF;}
 	</style>
 	<circle class="st2" cx="28.8" cy="25.9" r="17.6"/>
@@ -123,6 +120,7 @@
 
 			</div>
 			<div class="social-text1">
+				
 				<p>10,300</p>
 			</div>
 	</section>
@@ -132,7 +130,7 @@
 			<svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 	   <style type="text/css">
-		   .st4{fill:rgba(242 , 170, 76, 1);}
+		   .st4{fill:#0A0035;}
 		   .st5{fill:#FFFFFF;}
 	   </style>
 	   <ellipse class="st4" cx="16.2" cy="16" rx="14.9" ry="13.8"/>
@@ -210,14 +208,17 @@
 	</div>
 
 	<!-- Message Section -->
-<div class="messageAndSettings">
-		<form class="message">	
+
+	<section class="message">
+		
+
+		<form class="widget-container">	
 			<h3 class="message-header">Message User</h3>
 			<input type="text" class="form-field" id="userField" placeholder="Search for user">
 			<textarea  class="form-area" id="messageField" placeholder="Message for user" ></textarea>
 			<button class="button-primary" id="send">Send</button>
 		</form>
-
+	</section>
 
 	<!-- Settings Section -->
 	
@@ -346,7 +347,6 @@
 			<button class="button-cancel" id="cancelled">Cancel</button>
 		</div>
 	</div>
-</div>
 </div>
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>

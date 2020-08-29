@@ -203,9 +203,10 @@
     }
 
 
-    /* traffic  */
+    /* traffic  sectioon */
 
 .traffic{
+    display: grid;
     margin-top: 2%;
     grid-area: traffic;
     border-top-style: inset;
@@ -221,17 +222,144 @@
 
 .traffic-header{
     grid-area: traffic-header;
+    font-size: 20px;
 }
 
+/* traffic buttons */
+
 .traffic-nav{
+    display: grid;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, );
+    grid-template-columns: repeat(4, 1fr );
+    grid-template-rows: 1fr;
+    grid-template-areas: "button-1 button-2 button-3 button-4";
     justify-items: center;
     /* padding-left: 5%;
     padding-right: 5%;    */
-    grid-area: traffic-nav;
+    
 }
+.button-1{
+    grid-area: button-1;
+}
+.button-2{
+    grid-area: button-2;
+}
+.button-3{
+    grid-area: button-3;
+}
+.button-4{
+    grid-area: button-4;
+}
+.traffic-nav-link{
+    padding: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color  .2s ease-in , color  .2s ease-in;
+}
+.traffic-nav-link:hover{
+    background-color:rgba(242 , 170, 76, 1);
+    color: white;
+}
+
+   
+.widget-container-full {
+    grid-area: widget-container-full;
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+
+/* Daily Section */
+
+.daily{
+    display: grid;
+    grid-area: daily;
+    padding-top: 3%;
+   grid-template-columns: 1fr;
+   grid-template-rows: 75px 1fr;
+   grid-template-areas: 
+   "daily-header"
+   "widget-container-half";
+    }
+
+    .daily-header{
+        grid-area: daily-header;
+        font-size: 20px; 
+        
+    }
+    .widget-container-half{ 
+        grid-area: widget-container-half;
+        width: 70%;
+        margin: auto;
+    }
+    
+
+    /* mobile DAta */
+
+    .mobile{
+        display: grid;
+        grid-area: mobile;
+       padding-top: 3%;
+       grid-template-columns: 1fr;
+       grid-template-rows: 30px 1fr;
+       grid-template-areas: 
+       "mobile-header"
+       "widget-container-half";
+    }
+
+    .mobile-header{
+        grid-area: mobile-header;
+        font-size: 20px;
+    }
+
+    /* social Container */
+
+.social-container{
+    grid-area: social-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "facebook twitter"
+   ;
+}
+.facebook{
+    grid-area: facebook;
+   
+    
+}
+.twitter{
+    grid-area: twitter;
+  
+}
+#twitter{
+    width: 25%;
+    height: 25%;
+}
+
+#facebook{
+    width: 25%;
+    height: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

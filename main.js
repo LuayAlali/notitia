@@ -51,7 +51,7 @@ let trafficData = {
     datasets:[{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
-            // backgroundColor: 'rgba(255, 217, 114, .6)',
+            backgroundColor: 'rgba(242 , 170, 76, .2)',
             borderWidth: 1
     }]
 
@@ -61,7 +61,7 @@ let trafficData2 = {
     labels: ["0","1-3", "4-6", "7-9", "10-13", "14-17", "18-21", "22-24"],
     datasets:[{
         data: [50, 120, 70, 300, 425, 630, 2040, 700],
-            // backgroundColor: 'rgba(255, 217, 114, .6)',
+             backgroundColor: 'rgba(242 , 170, 76, .2)',
             borderWidth: 1
 }]
 };
@@ -70,7 +70,7 @@ let trafficData3 = {
     labels: ["M","T", "W", "Th", "F", "S", "Su"],
     datasets:[{
         data: [260, 320, 120, 600, 425, 1200, 2300],
-            // backgroundColor: 'rgba(255, 217, 114, .6)',
+            backgroundColor: 'rgba(242 , 170, 76, .2)',
             borderWidth: 1
 }]
 };
@@ -80,7 +80,7 @@ let trafficData5 = {
     labels: ["Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sept", "Oct", "Nov", "Dec"],
     datasets:[{
         data: [3000, 3500, 4200, 4800, 5100, 5600, 5700, 6200, 6500, 6800, 7200, 7300],
-            // backgroundColor: 'rgba(255, 217, 114, .6)',
+            backgroundColor: 'rgba(242 , 170, 76, .2)',
             borderWidth: 1
 }]
 };
@@ -211,7 +211,7 @@ const mobileData = {
 };
 
 const mobileOptions = {
-    aspectRatio: 2.5,
+    // aspectRatio: 2.5,
     animation: {
     duration: 1500
     },

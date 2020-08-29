@@ -126,26 +126,7 @@
     }
     
 
-.alert{
-    grid-area: alert;
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "alert-banner close";
-    border: solid black;
-    color: white;
-    background: rgba(26,26,26,.9);
-    border-radius: 5px;
-   
-   width: 95%;
-   justify-self: center;
-}
 
-    .alert-banner{
-        grid-area: alert-banner;
-        
-    }
     .close{
         grid-area: close;
         margin: auto;
@@ -172,6 +153,26 @@
             width: 180px;
             
         }
+        .alert{
+            grid-area: alert;
+            display: grid;
+            grid-template-columns: 1fr 30px;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "alert-banner close";
+            border: solid black;
+            color: white;
+            background: rgba(26,26,26,.9);
+            border-radius: 5px;
+           
+           width: 95%;
+           justify-self: center;
+        }
+        
+            .alert-banner{
+                grid-area: alert-banner;
+                
+            }
     .alert{
        margin: auto;
        cursor: default;    
@@ -209,8 +210,8 @@
         display: grid;
         grid-template-columns: repeat(4, );
         justify-items: center;
-        padding-left: 5%;
-        padding-right: 5%;   
+        /* padding-left: 5%;
+        padding-right: 5%;    */
         grid-area: traffic-nav;
     }
     .traffic-nav-link{
@@ -229,6 +230,10 @@
     width: 70%;
     padding-left: 5%;
     grid-area: widget-container-full;
+}
+/* Widget for Daily  & Mobile */
+.widget-container-half{ 
+    width: 50%;
 }
 /* Daily Section */
 
@@ -254,10 +259,7 @@ border-top-style: inset;
     
 
 
-/* Widget for Daily  & Mobile */
-.widget-container-half{ 
-    width: 50%;
-}
+
 
 /* Social Container */
 .social-container{

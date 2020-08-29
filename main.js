@@ -24,7 +24,7 @@ let trafficCanvas = document.getElementById('traffic-chart');
 
 //traffic options
 let trafficOptions = {
-    // aspectRatio: 2.5,
+    // aspectRatio: 0,
     animation: {
     duration: 2000
     },

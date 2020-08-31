@@ -32,60 +32,6 @@
 
 
 
-/* header */
-.app-header{
-    display: grid;
-    grid-template-columns:  3fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    " app-name  bell profile-picture profile-name";
-}
-.bell{
-    grid-area:bell;
-}
-.app-name{
-    grid-area: app-name;
-}
-
-.profile-picture{
-    grid-area: profile-picture;
-}
-.profile-name{
-    grid-area: profile-name;
-}
-
-/* dashboard */
-.dashboard{
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    grid-template-rows: 1fr 1fr 21px;
-    grid-template-areas: 
-    "headline headline"
-    "search-back ."
-    "alert alert";
-}
-
-.headline{
-    grid-area: headline;
-}
-.search-back{
-    grid-area: search-back
-}
-.alert{
-    grid-area: alert;
-    display: grid;
-    grid-template-columns:  9fr 1fr;
-    background-color: black;
-    color: white;
-}
-.alert p {
-    margin-top: 0;
-}
-.close{
-    margin-left: 5px;
-    
-}
-
 @media (min-width: 768px){
 
     .grid-container {

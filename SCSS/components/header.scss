@@ -1,38 +1,21 @@
 
 .app-header{
     display: grid;
-    grid-template-columns: 1fr 5% 15%;
+    grid-template-columns:  3fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "app-name bell profile-picture";
+    grid-template-areas: 
+    " app-name  bell profile-picture profile-name";
 }
-
+.bell{
+    grid-area:bell;
+}
 .app-name{
     grid-area: app-name;
-    margin-top: 0;
-    font-size: 20px;
-    margin-top:4px;
 }
 
-.bell{
-    grid-area: bell;
-   margin-right: auto;
-}
-
- .profile-name{
-    grid-area: profile-name;
-    margin-top: 7px;
-}
 .profile-picture{
     grid-area: profile-picture;
-    margin-top: 7px;
-    height: 35px;
-    width: 35px;
-    border-radius: 20px;
-    margin-top: 0;
 }
-
 .profile-name{
-    margin-bottom: 0;
-    padding-bottom: 0;
-     
+    grid-area: profile-name;
 }

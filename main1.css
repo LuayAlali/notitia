@@ -265,9 +265,7 @@
    
 .widget-container-full {
     grid-area: widget-container-full;
-    width: 100%;
-    margin: auto;
-    margin-top: 3%;
+    width: 110%;
 }
 
 
@@ -292,7 +290,7 @@
     .widget-container-half{ 
         grid-area: widget-container-half;
         width: 70%;
-        margin: auto;
+        
     }
     
 
@@ -301,9 +299,9 @@
     .mobile{
         display: grid;
         grid-area: mobile;
-       padding-top: 3%;
+        margin-top: 20px;
        grid-template-columns: 1fr;
-       grid-template-rows: 30px 1fr;
+       grid-template-rows: 40px 1fr;
        grid-template-areas: 
        "mobile-header"
        "widget-container-half";
@@ -312,6 +310,8 @@
     .mobile-header{
         grid-area: mobile-header;
         font-size: 20px;
+        margin-top: 0;
+        padding-bottom: 2%;
     }
 
     /* social Container */
@@ -327,16 +327,17 @@
 }
 .facebook{
     grid-area: facebook;
-   
+  margin-left: 25%;
     
 }
 .twitter{
     grid-area: twitter;
-  
+    margin-right: 25%;
 }
 #twitter{
     width: 25%;
     height: 25%;
+    
 }
 
 #facebook{

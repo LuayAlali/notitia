@@ -71,14 +71,14 @@
 		<section class="traffic">
 			<div class="traffic-header">
 				<h3>Traffic</h3>
-			</div>
+			
 			<ul class="traffic-nav">
 			<li class="traffic-nav-link button-1"><a class="traffic-data2">Hourly</a></li>
 			<li class="traffic-nav-link butoon-2"><a class="traffic-data3">Daily</a></li>
 			<li class="traffic-nav-link button-3"><a class="traffic-data">Weekly</a></li>
 			<li class="traffic-nav-link button-4"><a class="traffic-data5">Monthly</a></li>
 				</ul>
-				
+			</div>
 			<div class="widget-container-full">
 				
 				<canvas id="traffic-chart"></canvas>
@@ -105,7 +105,7 @@
 
 
 	<!-- Social Icons and data -->
-	<div class="social-container">
+	
 		<section class="facebook">
 			<div class="social-image1">
 				<svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -146,7 +146,7 @@
 			<p>10,300</p>
 		</div>
 	</section>
-	</div>
+	
 		<!--  NEW MEMBERS  -->
 		
 		<section class="members">
@@ -210,18 +210,20 @@
 	
 
 	<!-- Message Section -->
-
-		<form class="message">	
-			<h3 class="message-header">Message User</h3>
+	<section class="message">
+	<h3 class="message-header">Message User</h3>
+		
+			<form class=widget-container>	
 			<input type="text" class="form-field" id="userField" placeholder="Search for user">
 			<textarea  class="form-area" id="messageField" placeholder="Message for user" ></textarea>
 			<button class="button-primary" id="send">Send</button>
 		</form>
-
+	</section>
 
 	<!-- Settings Section -->
 	
-	<div class="settings">
+	<section class="settings">
+		<h3>Settings</h3>
 		<div class="settings-collection-1">
 		<p class="setting-1">Send Email Notification</p>
 	<label class="switch-light switch-ios switch-1" onclick="">
@@ -339,14 +341,14 @@
 				
 				</select>	  -->
 				
-			
+			</div>
 		
 		<div class="settings-button">
 			<button class="button-save" id="save">Save</button>
 			<button class="button-cancel" id="cancelled">Cancel</button>
 		</div>
-	</div>
-</div>
+	
+	</section>
 
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>

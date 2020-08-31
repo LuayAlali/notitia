@@ -1,28 +1,27 @@
-.traffic-nav{
-    list-style: none;
+.traffic-header-nav{
     display: grid;
-    grid-template-columns: repeat(4, 1fr );
-    justify-items: center;
-    /* padding-left: 5%;
-    padding-right: 5%;    */
-    grid-area: traffic-nav;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    "traffic-header"
+    "traffic-nav";
 }
 
+.traffic-header{
+    grid-area: traffic-header;
+}
+.traffic-nav{
+    grid-area: traffic-nav;
+    list-style: none;
+    display: inline-flex;
+}
 .traffic-nav-link{
-    padding: 5px 8px 5px 8px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    padding: 3px;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color  .2s ease-in , color  .2s ease-in;
 }
 .traffic-nav-link:hover{
-    background-color:rgba(242 , 170, 76, 1);
-    color: white;
-}
-
-   
-.widget-container-full {
-    grid-area: widget-container-full;
-    width: 70%;
-    margin: auto;
-    
+    background-color: coral;
 }

@@ -8,8 +8,8 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows:  10%  1fr 8%;
+    grid-template-columns: 100%;
+    grid-template-rows:  auto;
     grid-template-areas: 
     "header"
     "main"
@@ -26,6 +26,17 @@
    
 }
 
+/*  tablet media query */
+@media (min-width: 768px){
+    .grid-container{
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: {
+            "header header"
+            "nav main"
+        }    
+    }
+}
+
 /* header, main, navigation */
 
 /* header */
@@ -37,11 +48,11 @@
     grid-template-columns: 1fr 30px 150px;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "appName bell profile"
+    "app-name bell profile"
     ;
 }
-.appName{
-    grid-area: appName;
+.app-name{
+    grid-area: app-name;
     margin-top: 0;
     font-size: 20px;
     margin-top: 4px;
@@ -78,19 +89,18 @@
 
 
 /* Navigation*/
-.side-bar{
+.nav-bar{
     grid-area: nav;
-    
     }
 
     /* Main Container */
-    .mainBody {
+    .main-wrapper {
         grid-area: main;
         display: grid;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         background-color: #ffffff;
-        border-radius: 5px;
-        color:black;
+        /* border-radius: 5px; */
+        /* color:black;
        grid-template-columns: .7fr;
        grid-template-rows: repeat(8, 1fr);
        grid-template-areas: 
@@ -103,8 +113,16 @@
        "messageAndSettings"
        "messageAndSettings"
        ;
-       max-width: 1500px;
+       max-width: 1500px; */
     }
+    /* main body at tablet query */
+@media (min-width: 768px){
+    .main-wrapper{
+            grid-template-columns: 50%;
+    }
+}
+
+   
     .dashboard{
       display: grid;
       grid-template-columns: .4fr;
@@ -262,14 +280,15 @@ border-top-style: inset;
 
 
 /* Social Container */
-.social-container{
+
+/* .social-container{
     display: grid;
     grid-template-columns: .4fr .4fr;
     grid-area: social;
     grid-template-areas: 
     "facebook twitter"
     ;
-}
+} */
 .facebook{
     grid-area: facebook;
     display: grid;
@@ -663,7 +682,9 @@ opacity: 0.4;
     /* tablet layout */
     
     @media (min-width: 768px) {
-        
+        .dashboard, .traffic{
+            grid-column: 1 / span 2;
+        }
         /* body container */
         .grid-container {
             grid-template-rows:  15% 1fr ;

@@ -1,0 +1,45 @@
+/* recent Activity section */
+.recent-activity{
+    padding: 0 5px;
+}
+.members-action{
+    transition: opacity .2s ease-in 
+}
+.members-action:hover{
+    opacity: 0.7;
+}
+.members-activity{
+   display: grid;
+   grid-template-columns:  6fr 1fr;
+   grid-template-rows: 30px 1fr;
+   grid-template-areas: 
+   "member-paragraph arrow"
+   "time-of-action arrow"; 
+}
+
+.member-account{
+    text-decoration: none;
+    color: black;
+}
+
+.member-paragraph{
+    grid-area: member-paragraph;
+}
+
+.time-of-action{
+    grid-area: time-of-action;
+}
+
+.arrow{
+    grid-area: arrow;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    height: 10px;
+    width: 10px;
+    justify-self: end;
+    align-self: center;
+}

@@ -4,7 +4,6 @@
     transition: display, fill, opacity .3s;
     transition-timing-function: ease-in-out;
     /* transition-delay: .2s; */
-    margin-top: 8px;
     cursor: pointer;
 }
 

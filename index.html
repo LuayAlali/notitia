@@ -39,10 +39,10 @@
 		
 		
 	<nav class="nav-bar">
-		<a href=""><img src=""  class="icon1"></a>
-		<a href=""><img src=""  class="icon2"></a>
-		<a href=""><img src=""  class="icon3"></a>
-		<a href=""><img src=""  class="icon4"></a>
+		<a href="#dash"><img src="icons/icon-dashboard.svg"  class="icon-1"></a>
+		<a href="#visits"><img src="icons/icon-visits.svg"  class="icon-2"></a>
+		<a href="#member"><img src="icons/icon-members.svg"  class="icon-3"></a>
+		<a href="#setting"><img src="icons/icon-settings.svg"  class="icon-4"></a>
 	
 	</nav>
 	
@@ -53,7 +53,7 @@
 
 		<!-- Dashboard -->
 
-		<div class="dashboard">
+		<div class="dashboard" id="dash">
 			<h2 class="headline">Dashboard</h2>
 			<div class="search-back">
 			<input  class="search-bar" type="search" placeholder="Search"/>
@@ -68,7 +68,7 @@
 	
 
 		<!-- TRAFFIC -->
-		<section class="traffic">
+		<section class="traffic" id="visits">
 			<div class="traffic-header-nav">
 				<h3 class="traffic-header">Traffic</h3>
 			
@@ -149,7 +149,7 @@
 </div>
 		<!--  NEW MEMBERS  -->
 		
-		<section class="members">
+		<section class="members" id="member">
 			<h3>New Members</h3>
 			<!-- replace _blank with profile images -->
 			<div class="members-container-1">
@@ -178,32 +178,35 @@
 		<section class="recent-activity">
 			<h3 class="header-recent">RECENT ACTIVITY</h3>
 			
-			<div class="members-action1">
-				<div class="recent-member-1">
-				<img src="images/member-3.jpg" class="profile-image2">
+			<div class="members-action">
+				<div class="recent-member">
+				<img src="images/member-3.jpg" class="profile-image">
 				<div class="members-activity">
 					
-					<p><a href="#">member name</a> member action paragraph</p>	
-				</div>
+					<p class="member-paragraph"><a class="member-account" href="#">member name</a> member action paragraph</p>	
+				
 				
 				<p class="time-of-action">4 hours ago</p>
 
-			
+				<span class="arrow"></span>
 			</div>
-			<span class="arrow"></span>
+			</div>
+			
 		</div>
 		
 
-			<div class="members-action2">
+			<div class="members-action">
 				<div class="recent-member-2">
-				<img src="images/member-4.jpg" alt="profile picture" class="profile-image2">
+				<img src="images/member-4.jpg" alt="profile picture" class="profile-image">
 				<div class="members-activity">
-					<p><a href="#">member name</a> member action paragraph</p>
+					<p class="member-paragraph"><a  class="member-account" href="#">member name</a> member action paragraph</p>
 					
-				</div>
+				
 				<p class="time-of-action">1 day ago</p>
+				<span class="arrow"></span>
 			</div>
-			<span class="arrow1"></span>
+			</div>
+			
 		</div>
 			
 		
@@ -214,16 +217,16 @@
 	<section class="message">
 	<h3 class="message-header">Message User</h3>
 		
-			<form class=widget-container>	
+			<form class="widget-container">	
 			<input type="text" class="form-field" id="userField" placeholder="Search for user">
 			<textarea  class="form-area" id="messageField" placeholder="Message for user" ></textarea>
-			<button class="button-primary" id="send">Send</button>
+			<button class="button-send" id="send">Send</button>
 		</form>
 	</section>
 
 	<!-- Settings Section -->
 	
-	<section class="settings">
+	<section class="settings" id="setting">
 		<h3>Settings</h3>
 		<div class="settings-collection-1">
 		<p class="setting-1">Send Email Notification</p>
@@ -254,7 +257,7 @@
 	</div>
 			<!-- custom CSS toggle code -->
 		<div class="settings-collection-2">
-			<!-- <select id="timezone" class="time-zone">
+			<select id="timezone" class="time-zone">
 					<option disabled selected>Select a Timezone</option>
 					<option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
 					<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -340,7 +343,7 @@
 					<option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
 				
 				
-				</select>	  -->
+				</select>	 
 				
 			</div>
 		

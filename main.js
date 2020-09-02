@@ -155,7 +155,7 @@ const dailyData = {
     datasets: [{
         label: '# of Hits',
         data: [75, 115, 175, 125, 225, 200, 100],
-        backgroundColor:  'rgba(26,26,26,.9)',
+        backgroundColor:  'rgba(97 ,87,110,0.7)',
         borderWidth: 1
     }]
 
@@ -247,3 +247,5 @@ const mobileOptions = {
             }
 
         });
+
+  

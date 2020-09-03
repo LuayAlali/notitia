@@ -571,7 +571,22 @@ html{
     .mobile, .recent-activity, .settings {
         grid-column: 2 / span 1;
     }
+    /* dashboard */
 
+    .dashboard{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 1fr 21px;
+        grid-template-areas: 
+        "headline search-back"
+        "alert alert";
+    }
+    .search-back{
+        justify-self: end;
+        margin-right: 10px;
+        align-self: center;
+        
+    }
     /* widget containers */
 
     .widget-container-full{

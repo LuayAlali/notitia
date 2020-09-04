@@ -5,7 +5,7 @@
    
 }
 .traffic,.daily,.mobile,.members,.recent-activity,.message,.settings, .social{
-    outline: 1px solid rgba(211,211,211,0.2);
+    outline: 1px solid rgba(211,211,211,0.4);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -46,6 +46,7 @@ html{
     margin-left: 5px;
     margin-right: 5px;
     overflow-y: scroll;
+    grid-template-columns: 1fr;
     
 }
 
@@ -209,6 +210,9 @@ display: grid;
 .traffic-header{
     grid-area: traffic-header;
     text-transform: uppercase;
+    padding-left: 10px;
+    font-size: 16px;
+    align-self: center;
 }
 .traffic-nav{
     grid-area: traffic-nav;
@@ -219,7 +223,7 @@ display: grid;
     margin: auto;
     background-color: white;
     color: rgba(0, 0, 0, 0.65);
-    padding: 5px;
+    padding: 0 5px;
     border-radius: 8px;
     transition: background-color  ease-in 0.2s;
     transition: color ease-in 0.2s;
@@ -232,6 +236,8 @@ display: grid;
 /* headers only*/
 .daily-header,.mobile-header,.header-recent,.message-header,.settings-header,.member-header{
     text-transform: uppercase;
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 /* social network section */ 
@@ -257,6 +263,7 @@ display: grid;
     ;
     background-color: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
     padding: 0 20px;
 }
 
@@ -283,6 +290,7 @@ display: grid;
     ;
     background-color: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
     padding: 0 20px;
 }
 
@@ -308,6 +316,7 @@ display: grid;
     ;
     background-color: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
     padding: 0 20px;
 }
 .social-image-3{
@@ -329,42 +338,191 @@ display: grid;
 
 /* new member section */
 .members{
-    padding: 0 5px;
+    padding: 0 10px 0 5px;
 }
 
-.profile-image{
+
+.members-container-1{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "profile-image-1 member-text-1"
+        "profile-image-1 member-text-1";
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.members-container-2{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "profile-image-2 member-text-2"
+        "profile-image-2 member-text-2";
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+    }
+    .members-container-3{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "profile-image-3 member-text-3"
+            "profile-image-3 member-text-3";
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+        margin-top: 20px;
+        font-size: 12px;
+        }
+        .members-container-4{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "profile-image-4 member-text-4"
+                "profile-image-4 member-text-4";
+            padding-bottom: 10px;
+            margin-top: 20px;
+            font-size: 12px;
+            }
+.profile-image-1{
     border-radius: 60px;
     height: 50px;
+    grid-area: profile-image-1;
 }
-.members-text{
+.profile-image-2{
+    border-radius: 60px;
+    height: 50px;
+    grid-area: profile-image-2;
+}
+.profile-image-3{
+    border-radius: 60px;
+    height: 50px;
+    grid-area: profile-image-3;
+}
+.profile-image-4{
+    border-radius: 60px;
+    height: 50px;
+    grid-area: profile-image-4;
+}
+
+.members-text-1{
+    grid-area: member-text-1;
     display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 3fr 1fr;
    grid-template-rows: 30px 1fr;
     grid-template-areas:
-    "member-name member-email"
-    "comment-date .." ;
+    "member-name-1 comment-date-1"
+    "member-email-1 comment-date-1" ;
+}
+.members-text-2{
+    grid-area: member-text-2;
+    display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 30px 1fr;
+    grid-template-areas:
+    "member-name-2 comment-date-2"
+    "member-email-2 comment-date-2" ;
+}
+.members-text-3{
+    grid-area: member-text-3;
+    display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 30px 1fr;
+    grid-template-areas:
+    "member-name-3 comment-date-3"
+    "member-email-3 comment-date-3" ;
+}
+.members-text-4{
+    grid-area: member-text-4;
+    display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 30px 1fr;
+    grid-template-areas:
+    "member-name-4 comment-date-4"
+    "member-email-4 comment-date-4" ;
 }
 
-.member-name{
-    grid-area: member-name;
-    margin-top: 0;
-    margin-right: 5px;
-    justify-self: end;
+.member-name-1{
+    grid-area: member-name-1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+}
+.member-name-2{
+    grid-area: member-name-2;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+}
+.member-name-3{
+    grid-area: member-name-3;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+}
+.member-name-4{
+    grid-area: member-name-4;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
 }
 
-.member-email{
-    grid-area: member-email;
-   text-decoration: underline;
-   color: black;
+
+.member-email-1{
+    grid-area: member-email-1;
+   text-decoration: none;
+   color: rgba(242 , 170, 76, 0.6);
 }
-.comment-date{
-    grid-area: comment-date;
-    margin-top: 0;
+.member-email-2{
+    grid-area: member-email-2;
+   text-decoration: none;
+   color: rgba(242 , 170, 76, 0.6);
+}
+.member-email-3{
+    grid-area: member-email-3;
+   text-decoration: none;
+   color: rgba(242 , 170, 76, 0.6);
+}
+.member-email-4{
+    grid-area: member-email-4;
+   text-decoration: none;
+   color: rgba(242 , 170, 76, 0.6);
+}
+.member-email-1,.member-email-2,.member-email-3,.member-email-4{
+    font-size: 12px;
+}
+.comment-date-1{
+    grid-area: comment-date-1;
     justify-self: end;
     margin-right: 5px;
-    font-size: 15px;
     color: rgba(0, 0, 0, 0.7)
 }
+.comment-date-2{
+    grid-area: comment-date-2;
+    justify-self: end;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.7)
+}
+.comment-date-3{
+    grid-area: comment-date-3;
+    justify-self: end;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.7)
+}
+.comment-date-4{
+    grid-area: comment-date-4;
+    justify-self: end;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.7)
+}
+
 
 
 
@@ -379,7 +537,73 @@ display: grid;
 .members-action:hover{
     opacity: 0.7;
 }
-.members-activity{
+
+.recent-member-1{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "recent-profile-1 member-activity-1"
+        "recent-profile-1 member-activity-1";
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.recent-member-2{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "recent-profile-2 member-activity-2"
+        "recent-profile-2 member-activity-2";
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.recent-member-3{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "recent-profile-3 member-activity-3"
+        "recent-profile-3 member-activity-3";
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.recent-member-4{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "recent-profile-4 member-activity-4"
+        "recent-profile-4 member-activity-4";
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.recent-profile-1,.recent-profile-2,.recent-profile-3,.recent-profile-4{
+    border-radius: 60px;
+    height: 50px;
+}
+.recent-profile-1{
+    grid-area: recent-profile-1;
+}
+.recent-profile-2{
+    grid-area: recent-profile-2;
+}
+.recent-profile-3{
+    grid-area: recent-profile-3;
+}
+.recent-profile-4{
+    grid-area: recent-profile-4;
+}
+.members-activity-1{
+    grid-area: member-activity-1;
    display: grid;
    grid-template-columns:  6fr 1fr;
    grid-template-rows: 30px 1fr;
@@ -387,7 +611,33 @@ display: grid;
    "member-paragraph arrow"
    "time-of-action arrow"; 
 }
-
+.members-activity-2{
+    grid-area: member-activity-2;
+   display: grid;
+   grid-template-columns:  6fr 1fr;
+   grid-template-rows: 30px 1fr;
+   grid-template-areas: 
+   "member-paragraph arrow"
+   "time-of-action arrow"; 
+}
+.members-activity-3{
+    grid-area: member-activity-3;
+   display: grid;
+   grid-template-columns:  6fr 1fr;
+   grid-template-rows: 30px 1fr;
+   grid-template-areas: 
+   "member-paragraph arrow"
+   "time-of-action arrow"; 
+}
+.members-activity-4{
+    grid-area: member-activity-4;
+   display: grid;
+   grid-template-columns:  6fr 1fr;
+   grid-template-rows: 30px 1fr;
+   grid-template-areas: 
+   "member-paragraph arrow"
+   "time-of-action arrow"; 
+}
 .member-account{
     text-decoration: none;
     color: black;
@@ -396,12 +646,13 @@ display: grid;
 
 .member-paragraph{
     grid-area: member-paragraph;
-    margin-top: 0;
+   
 }
 
 .time-of-action{
     grid-area: time-of-action;
     margin-top: 0;
+    margin-bottom:0;
 }
 
 .arrow{
@@ -425,13 +676,15 @@ display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 70px 1fr;
     align-items: end;
+    padding-top:0;
 }
 .message-header{
     display: grid;
     justify-items: start;
-    font-size: 20px;
+    font-size: 16px;
     margin-left:20px;
     align-self: end;
+    padding-left: 0;
 }
 .widget-container{
     display: grid;
@@ -520,12 +773,13 @@ display: grid;
     "settings-collection-1"
     "settings-collection-2";
     justify-items: center;
+    padding-top:0;
 }
 .settings-header {
     justify-self: start;
     margin-left: 20px;
     align-self: end;
-    
+    padding-left: 0;
 }
 .settings-collection-1{
     grid-area: settings-collection-1;

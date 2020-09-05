@@ -1,1 +1,0 @@
-.app-header{display:grid;grid-template-columns:3fr 1fr 1fr 1fr;grid-template-rows:1fr;grid-template-areas:" app-name  bell profile-picture profile-name"}.bell{grid-area:bell}.app-name{grid-area:app-name}.profile-picture{grid-area:profile-picture}.profile-name{grid-area:profile-name}

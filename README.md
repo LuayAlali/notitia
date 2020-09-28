@@ -1,4 +1,4 @@
 # notitia
  
 
-This application is one page analytics page. It can be used  to collect and analyze date from social media sources and other data-based business.
+This application is a one page analytics dashboard. This is front-end only, you will need to fetch data from an api. Instruction on how to use an API is available through the API's documentation page.
